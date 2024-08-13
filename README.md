@@ -12,6 +12,7 @@ Everything the user needs to know will be explained thoroughly in this document.
 ## Table of contents
 1. [Installation and usage](#installation-and-usage)   
    1. [Installation](#installation)
+      2. [Install git](#install-via-git)
    2. [How to use](#how-to-use)
    3. [Available tools](#available-tools)
 2. [Walkthrough](#walkthrough)
@@ -44,9 +45,30 @@ Everything the user needs to know will be explained thoroughly in this document.
 
 # Installation and usage
 
+No prior knowledge of console and command-line arguments is needed, although preferred. 
+Everything will be explicit in this document. 
+
+## Pre-requisites
+
+To use this application, you will need to have Python 3.10 or more on your computer. Any older version will
+not be tested for compatibility.
+
 
 ## Installation
+You have two ways to install the application : installing via the git tool, or via downloading the zip file directly.
+The second option is 
+### Install via git
+It is however needed to have `git` installed on your computer. You can get it on the official site 
+[here](https://git-scm.com/downloads). Once downloaded, install it on your system.
 
+Once installed, open a terminal. You ca check the successful installation of git by writing
+```console
+git --version
+```
+
+It should print th installed version, such as `git version 2.34.1`.
+
+Next is to download 
 ## How to use
 
 ## Available tools
