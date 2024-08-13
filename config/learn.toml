@@ -17,8 +17,6 @@ save_metrics = "output/metrics.txt"
         class_weight = "balanced"
         criterion = 'gini'
 
-
-
 [dataset]
 train = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_train.csv"
 test = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"

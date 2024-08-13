@@ -1,4 +1,3 @@
-
 [filesorter]
 enable_multiple = true
     [filesorter.multiple]
@@ -10,7 +9,6 @@ enable_multiple = true
     [filesorter.multiple.targets]
     'NI' = 'Mock'
     'TAHV' = 'Tahv'
-
 
     [filesorter.single]
     # Absolute path required
@@ -24,28 +22,28 @@ index_col = "TimeStamp [µs]"
 behead = 6
 
 subdivide = 30
-fft = 10000
+fft = 10000  # in Hz
 average = true
 interpolation = 300
 
     [signal.select_columns]
-    mode = "max"
-    metric = "std"
-    number = 35
+    mode = "max" # select columns by their maximum metric
+    metric = "std"  # Metric used to select columns
+    number = 35  # number of columns to select, based on mode and metric
 
     [signal.filtering]
     enable = true
     order = 3
-    sampling_frequency = 10000
-    type = 'highpass' # among 'highpass', 'lowpass', 'bandstop', 'bandpass'
-    first_freq = 50
-    second_freq = 0 # only if 'bandstop' or 'bandpass'
+    sampling_frequency = 10000  # in Hz
+    type = 'highpass'  # among 'highpass', 'lowpass', 'bandstop', 'bandpass'
+    first_freq = 50  # in Hz
+    second_freq = 0  # in Hz, only if 'bandstop' or 'bandpass'
 
     [signal.harmonics]
     enable = true
     order = 3
     type = 'all' # among 'all', 'even', 'odd'
-    frequency = 50
+    frequency = 50  # in Hz
     nth = 35
 
 [save]
@@ -55,4 +53,4 @@ keyword = ""
 filename = ""
 # Absolute path required
 save_under = "/home/wlutz/PycharmProjects/FireLearnConsole/output"
-make_as_dataset = true
+make_as_dataset = true  # or false
