@@ -46,29 +46,50 @@ Everything the user needs to know will be explained thoroughly in this document.
 # Installation and usage
 
 No prior knowledge of console and command-line arguments is needed, although preferred. 
-Everything will be explicit in this document. 
-
-## Pre-requisites
-
-To use this application, you will need to have Python 3.10 or more on your computer. Any older version will
-not be tested for compatibility.
+Everything will be explicit in this document.
 
 
 ## Installation
-You have two ways to install the application : installing via the git tool, or via downloading the zip file directly.
-The second option is 
 ### Install via git
 It is however needed to have `git` installed on your computer. You can get it on the official site 
 [here](https://git-scm.com/downloads). Once downloaded, install it on your system.
 
-Once installed, open a terminal. You ca check the successful installation of git by writing
+Once installed, open a terminal. You can check the successful installation of git by writing
 ```console
 git --version
 ```
 
 It should print th installed version, such as `git version 2.34.1`.
 
-Next is to download 
+Next is to clone the project locally on your system. To do so, open a terminal on the desired location to 
+download the project.
+Open a terminal window at this location, then enter the following command
+```console
+git clone https://github.com/WillyLutz/FireLearnConsole.git
+```
+
+wait for a bit, and you should have a following result as following
+![clone](data/help/git-clone-repo.png)
+
+The last step is to make the main file executable. To do so, enter the directory `FireLearnConsole` either by 
+opening a new terminal at the location or by using the following command on the previously used terminal.
+```console
+cd FireLearnConsole/
+```
+
+Then use the command
+```console
+chmod +x firelearn.py
+```
+to grant executable permission to the file.
+The project is now ready to use !
+
+### Update the project
+If you already have the project set up, you can easily update it. Go inside the FireLearnConsole directory,
+then use the command
+```console
+git pull origin master
+```
 ## How to use
 
 ## Available tools
