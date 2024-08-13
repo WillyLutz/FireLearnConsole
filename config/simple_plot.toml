@@ -1,0 +1,52 @@
+[dataset]
+path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
+target_column = "label"
+targets = ["NI T48 B", "TAHV T48 B"]
+
+[figure]
+show = true
+dpi = 100
+save = "output/simple_plot.png"
+
+font = "DejaVu Sans"
+width = 8
+height = 8
+linewidth = 1
+linestyle = "solid"
+
+colors = ['blue', 'red', 'green', 'orange']
+alpha = 1
+fillalpha = 0.4
+
+[title]
+label = "Principal component analysis"
+size = 14
+
+[axes]
+
+xlabel = "Features"
+xsize = 12
+ylabel = "Amplitude [pV]"
+ysize = 12
+
+[ticks]
+xrot = 0
+xsize = 12
+xround = 2
+nx = 7
+
+yrot = 0
+ysize = 12
+yround = 2
+ny = 5
+
+[legend]
+enable = true
+draggable = true
+n_cols = 1
+size = 12
+alpha = 1
+framealpha = 0.5
+anchor = "best" # ['best', 'upper left', 'upper right', 'lower left', 'lower right', 'upper center', 'lower center', 'center left', 'center right', 'center', 'custom']
+xpos = 0
+ypos = 0

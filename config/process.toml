@@ -1,0 +1,58 @@
+
+[filesorter]
+enable_multiple = true
+    [filesorter.multiple]
+    # Absolute path required
+    parent_directory="/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H"
+    to_include = ['Analog.csv', ]
+    to_exclude = ['TTX', ]
+
+    [filesorter.multiple.targets]
+    'NI' = 'Mock'
+    'TAHV' = 'Tahv'
+
+
+    [filesorter.single]
+    # Absolute path required
+    file=""
+
+
+[signal]
+
+index_col = "TimeStamp [µs]"
+# putting value to 0 disables the parameter
+behead = 6
+
+subdivide = 30
+fft = 10000
+average = true
+interpolation = 300
+
+    [signal.select_columns]
+    mode = "max"
+    metric = "std"
+    number = 35
+
+    [signal.filtering]
+    enable = true
+    order = 3
+    sampling_frequency = 10000
+    type = 'highpass' # among 'highpass', 'lowpass', 'bandstop', 'bandpass'
+    first_freq = 50
+    second_freq = 0 # only if 'bandstop' or 'bandpass'
+
+    [signal.harmonics]
+    enable = true
+    order = 3
+    type = 'all' # among 'all', 'even', 'odd'
+    frequency = 50
+    nth = 35
+
+[save]
+random_key = true
+timestamp = true
+keyword = ""
+filename = ""
+# Absolute path required
+save_under = "/home/wlutz/PycharmProjects/FireLearnConsole/output"
+make_as_dataset = true

@@ -1,0 +1,41 @@
+[model]
+path = "data/model.rfc"
+
+
+[figure]
+show = true
+dpi = 100
+save = "output/feature_importance.png"
+
+font = "DejaVu Sans"
+width = 8
+height = 8
+linewidth = 1
+linestyle = "solid" # dotted, dashed, dashdot
+color = 'blue'
+alpha = 1
+fill = "below" #none, above
+alpha_fill = 0.3
+
+    [figure.title]
+    label = "my title"
+    size = 14
+
+    [figure.axes]
+
+    xlabel = "Features"
+    xsize = 12
+    ylabel = "Relative importance [AU]"
+    ysize = 12
+
+    [figure.ticks]
+    xrot = 35
+    xsize = 12
+    xround = 0
+    nx = 7
+    yrot = 0
+    ysize = 12
+    yround = 2
+    ny = 5
+
+

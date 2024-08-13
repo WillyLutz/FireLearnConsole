@@ -1,0 +1,44 @@
+[model]
+path = "data/model.rfc"
+train = ["NI T48 B", "TAHV T48 B"]
+test = ["NI T48 B", "TAHV T48 B"]
+
+[dataset]
+path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
+target_column = "label"
+
+[figure]
+iterations = 3
+mode = "percent"
+show = true
+dpi = 100
+save = "output/confusion.png"
+
+width = 8
+height = 8
+font = "DejaVu Sans"
+    [figure.title]
+    label = "my title"
+    size = 14
+
+
+    [figure.cbar]
+    shrink =  0.5
+    location = 'right'
+
+    [figure.annot]
+    size = 12
+
+    [figure.axes]
+    xlabel = "The input is classified as"
+    xsize = 12
+    ylabel = "The input is"
+    ysize = 12
+
+    [figure.ticks]
+    xrot = 0
+    xsize = 12
+    yrot = 0
+    ysize = 12
+
+
