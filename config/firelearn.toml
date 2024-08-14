@@ -1,5 +1,5 @@
 [logging]
-out = "firelearn.log"
+out = "logs/firelearn.log"
 clear_each_run = true
-format = '%(asctime)s %(levelname)-8s %(name)s %(message)s'
+format = "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s"
 datefmt = '%Y-%m-%d %H:%M:%S'

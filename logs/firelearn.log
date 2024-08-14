@@ -1,0 +1,27 @@
+2024-08-14 15:38:58,230 — root — DEBUG — <module>:50 — this a a warning !
+2024-08-14 15:38:58,230 — root — INFO — <module>:51 — this a a warning !
+2024-08-14 15:38:58,230 — root — WARNING — <module>:52 — this a a warning !
+2024-08-14 15:38:58,230 — root — ERROR — <module>:53 — this a a warning !
+2024-08-14 15:38:58,230 — root — CRITICAL — <module>:54 — this a a warning !
+2024-08-14 15:39:14,242 — root — DEBUG — <module>:50 — this a a warning !
+2024-08-14 15:39:14,242 — root — INFO — <module>:51 — this a a warning !
+2024-08-14 15:39:14,242 — root — WARNING — <module>:52 — this a a warning !
+2024-08-14 15:39:14,242 — root — ERROR — <module>:53 — this a a warning !
+2024-08-14 15:39:14,242 — root — CRITICAL — <module>:54 — this a a warning !
+2024-08-14 15:39:46,060 — root — DEBUG — <module>:51 — this a a warning !
+2024-08-14 15:39:46,060 — root — INFO — <module>:52 — this a a warning !
+2024-08-14 15:39:46,060 — root — WARNING — <module>:53 — this a a warning !
+2024-08-14 15:39:46,060 — root — ERROR — <module>:54 — this a a warning !
+2024-08-14 15:39:46,060 — root — CRITICAL — <module>:55 — this a a warning !
+2024-08-14 15:40:37,448 — __name__ — INFO — <module>:27 — NEW RUN
+2024-08-14 15:40:37,448 — __name__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-pca']
+2024-08-14 15:41:34,090 — __main__ — INFO — <module>:27 — NEW RUN
+2024-08-14 15:41:34,090 — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-pca']
+'2024-08-14 15:46' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-08-14 15:46' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-pca']
+'2024-08-14 15:50' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-08-14 15:50' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-pca']
+'2024-08-14 15:50' — __pca__ — INFO — pca3D:253 — Drawing PCA 3D
+'2024-08-14 15:50' — __pca__ — INFO — setup_pca:92 — Setting up
+'2024-08-14 15:50' — __pca__ — DEBUG — setup_pca:95 — n labels = 2
+'2024-08-14 15:50' — __pca__ — INFO — pca3D:307 — Saving figure at : 'output/pca3D.png'

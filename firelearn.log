@@ -1,5 +1,0 @@
-2024-08-14 13:39:01 DEBUG    __main__ ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-pca']
-2024-08-14 13:39:01 INFO     __pca__ Setting up
-2024-08-14 13:39:01 DEBUG    __pca__ n labels = 2
-2024-08-14 13:39:02 INFO     __pca__ Saving figure at : 'output/pca3D.png'
-2024-08-14 13:39:02 INFO     __pca__ Plotting result

@@ -250,6 +250,8 @@ def pca2D():
 
 
 def pca3D():
+    logger.info("Drawing PCA 3D")
+    
     labels_to_apply = config["pca"]["apply"]
     label_column = config["pca"]["target_column"]
     

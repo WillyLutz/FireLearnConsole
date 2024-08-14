@@ -8,7 +8,7 @@ show_ratio = true  # display the ratio of the components in the axis label
 ellipsis = true  # Show a confidence ellipsis based on co-variance (only for 2 components)
 
 [figure]
-show = true
+show = false
 dpi = 100
 save = "output/pca3D.png"
 

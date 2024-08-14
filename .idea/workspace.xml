@@ -4,29 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.0.1&#10;update readme for processing">
-      <change afterPath="$PROJECT_DIR$/data/help/confusion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/help/feature_importance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/help/metrics.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/help/model.rfc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/help/pca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/help/simple_plot.png" afterDir="false" />
+    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.0.1&#10;readme completion">
+      <change afterPath="$PROJECT_DIR$/logs/firelearn.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logging.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/README-gui.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/confusion.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/confusion.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/feature_importance.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/feature_importance.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/firelearn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/firelearn.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/learn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/learn.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/pca.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/pca.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/simple_plot.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/simple_plot.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firelearn.out" beforeDir="false" afterPath="$PROJECT_DIR$/firelearn.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firelearn.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/firelearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/firelearn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pca.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/pca.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/simple_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/simple_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/learning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/simple_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/simple_plot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,9 +68,10 @@
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/logs" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data/help" />
       <recent name="$PROJECT_DIR$/output" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
@@ -192,15 +179,27 @@
       <option name="project" value="LOCAL" />
       <updated>1723558087238</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="v0.0.1&#10;readme completion">
+      <option name="closed" value="true" />
+      <created>1723636843305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723636843305</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.0.1&#10;a ready-to-test version. Unstable for general use." />
     <MESSAGE value="v0.0.1&#10;add requirements" />
     <MESSAGE value="v0.0.1&#10;test for tutorial" />
     <MESSAGE value="v0.0.1&#10;update readme for processing" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.1&#10;update readme for processing" />
+    <MESSAGE value="v0.0.1&#10;readme completion" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.1&#10;readme completion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -214,6 +213,16 @@
           <url>file://$PROJECT_DIR$/scripts/processing.py</url>
           <line>163</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/lib/python3.10/logging/config.py</url>
+          <line>227</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/lib/python3.10/logging/config.py</url>
+          <line>188</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
