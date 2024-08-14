@@ -9,8 +9,7 @@ line of code. The only thing the user will be required to do is to modify the
 
 Everything the user needs to know will be explained thoroughly in this document.
 
-## Table of contents
-
+# Table of contents
 
 
 
@@ -110,7 +109,7 @@ be tuned to the user needs.
 
 ### Available arguments
 * `-p` Enables the processing, controlled by `processing.toml`
-* `-l` Enables the learning, controlled by `learning.toml`
+* `-l` Enables the learning, controlled by `learn.toml`
 * `-c` Enables the confusion analysis, controlled by `confusion.toml`
 * `-i` Enables the feature importances analysis, controlled by `feature_importances.toml`
 * `-pca` Enables the PCA analysis, controlled by `pca.toml`
@@ -163,6 +162,8 @@ More specific use of our configuration files will be found in their relevant sec
 
 ## Processing
 Configuration file : `processing.toml`
+
+Enabled using `-p` command line argument.
 ### Example: directory structure
 For this document we will proceed considering this recommended directory structure : 
 ```
@@ -432,15 +433,237 @@ The `save_under` allow to specify the directory where the resulting files will b
 
 
 ## Learning
+Configuration file : `learn.toml`
+
+Enabled using `-l` command line argument.
+
+Up to this moment, the only learning algorithm available is Random Forest Classifier. 
+More models are to come in newer versions.
+
+### Load and save
+```toml
+[model]
+# Absolute path recquired
+load = ""
+save_model = "output/model.rfc"  # empty to disable
+save_metrics = "output/metrics.txt"  # empty to disable
+```
+You can load and use a model that have already been trained using the `load` variable, by giving the absolute
+path of the model. `save_model` and `save_metrics` indicate where the newly trained model and the 
+associated metrics will be saved. 
+
+### Training and testing
+```toml
+[model.train]
+    targets = ["NI T48 B", "TAHV T48 B"]
+    n_iter = 3
+
+[model.test]
+    metrics = true
+```
+The targets represent the labels in the provided dataset that will be used for the training. The synthax
+must be inside quotes, separated by comas, all that in brackets such as 
+```toml
+targets = ["target1", "target 2", "TARGET 3"]
+```
+The targets are case-sensitive.
+
+If `metrics` is true, then after the learning some quick metrics will be displayed (and saved if 
+`save_metrics` is not empty) such as accuracy. 
+
+### Tuning the model
+```toml
+[model.params.rfc]
+n_estimators = 100
+verbose = 0
+class_weight = "balanced"
+criterion = 'gini'
+```
+In here, you can change the values of the variables as you see fit. Some of the basic are already
+put in the .toml file, but you can fetch more at the [official documentation for RFC](#https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html).
+However, you must make sure to use the correct synthax. For example, if you want to add and tune the
+parameter `max_depth`, it will be as following
+```toml
+[model.params.rfc]
+n_estimators = 100
+verbose = 0
+class_weight = "balanced"
+criterion = 'gini'
+max_depth = 32
+```
+> <img src="data/help/yellow_warning.png" width="30" height="30">
+>
+> When adding or tuning parameters, you must make sure they are of the correct type.
+> (E.g. : according to the documentation, `max_depth` must be of type `int` or `float`
+> , and has default value `None`.)
+
+### Dataset selection and split
+```toml
+[dataset]
+# empty to disable
+split = "/my/path/DATASETS/my_formatted_dataset.csv"
+ratio = 0.7
+train = "/my/path/DATASETS/my_formatted_dataset_Xy_train.csv"
+test = "/my/path/DATASETS/my_formatted_dataset_Xy_test.csv"
+target_column = "label"
+```
+The `split` variable, if not empty, will take the dataset and split it randomly into two datasets 
+of ratio 0.7-0.3, that will be renamed by adding `_Xy_train` and `_Xy_test` respectively.
+
+> <img src="data/help/red_warning.png" width="30" height="30">
+>
+> It is of utmost importance to have two separated datasets to train and test, to avoid data leakage.
+
+If you already have two separated datasets, you can ignore the `split` variable and let it empty.
+> <img src="data/help/yellow_warning.png" width="30" height="30">
+>
+> _in fine_, the datasets that will be used are the one in `train` and `test` variables.
+
+The `target_column` indicates the name of the column in the datasets that contains the labels/targets 
+for the splitting, training and testing.
 
 ## Analysis
+Multiple analysis tools are provided in this application. A lot of aspects in the following figures and tools can be
+customized.
 
-# Project information
+More analysis tools are to be provided with newer versions.
+
+### Common configuration variables
+Since the analytical tools aim to provide visual and numerical representation, a lot of customisation variable
+have the same behaviour between the configuration files, often linked to the figure appearance 
+(labels, size, rotation, color...).
+
+We judged those variables are explicit by themselves, we will not extend further. If some may be a bit specific, we 
+will explain them on their specific analysis tool section.
+
+> <img src="data/help/yellow_warning.png" width="30" height="30">
+>
+> Note that the variables used are those of the [matplotlib](#https://matplotlib.org/) library. So the 
+> parameters such as color or font which have a lot of different possibilities, you will be able to find 
+> more exhaustive lists of available values on their documentation or by a quick internet search.
+
+
+
+### Simple plots
+Configuration file : `simple_plot.toml`
+
+Enabled using `-plot` command line argument.
+
+<img src="data/help/simple_plot.png" width="400" height="400">
+
+```toml
+[dataset]
+# Absolute path recquired
+path = "/my/path/DATASETS/my_dataset_Xy_test.csv"
+target_column = "label"  # The column name containing the labels
+targets = ["NI T48 B", "TAHV T48 B"]  # The labels that will be plotted
+
+[figure]
+colors = ['blue', 'red', 'green', 'orange']
+```
+Note that there are four colors already pre-filled in the variable. Those allow you to specify the
+color you want for each curve. They are selected by order (the first element of `colors` will
+be applied to the first element of `targets`). As such, if you have more than four targets,
+you will need to add that many colors in `colors`.
+
+
+### Feature importance
+Configuration file : `feature_importance.toml`
+
+Enabled using `-i` command line argument.
+
+<img src="data/help/feature_importance.png" width="400" height="400">
+
+### Principal Component Analysis (PCA)
+Configuration file : `pca.toml`
+
+Enabled using `-pca` command line argument.
+
+<img src="data/help/pca2D.png" width="400" height="400"> 
+<img src="data/help/pca3D.png" width="400" height="400">
+
+```toml
+[pca]
+dataset = "/my/path/DATASETS/my_dataset_Xy_test.csv"
+target_column = "label"  # The column name containing the labels
+fit = ["NI T48 B", "TAHV T48 B"]
+apply = ["NI T48 B", "TAHV T48 B"]
+n_components = 3  # 2 or 3
+show_ratio = true  # display the ratio of the components in the axis label
+ellipsis = true  # Show a confidence ellipsis based on co-variance (only for 2 components)
+```
+We separated the two process of fitting the pca transformation and the application of it.
+As such it is possible to fit the transformation on certain labels, in `fit`, and apply the transformation
+to other labels in `apply`. Note that only the labels in `apply` will be plotted.
+
+
+```toml
+[figure]
+colors = ['blue', 'red', 'green', 'orange']
+alphas = [1, 1, 1, 1, ]
+```
+Note that there are four colors already pre-filled in the variable. Those allow you to specify the
+color you want for each curve. They are selected by order (the first element of `colors` will
+be applied to the first element of `targets`). As such, if you have more than four targets,
+you will need to add that many colors in `colors`.
+The same case applies for the `alphas`.
+
+### Confusion matrix
+Configuration file : `confusion.toml`
+
+Enabled using `-c` command line argument.
+
+<img src="data/help/confusion.png" width="400" height="400">
+
+```toml
+[model]
+path = "data/model.rfc"  # a trained model
+train = ["NI T48 B", "TAHV T48 B"]
+test = ["NI T48 B", "TAHV T48 B"]
+```
+Confusion matrix of the machine learning algorithm trained, and
+tested on some conditions. In every case, the first number describes
+the number of inputs from the X axis classified as the condition in the Y axis. 
+
+For more details on how to read a confusion matrix, you can read this 
+[towards data science article](#https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62).
+
+
+> <img src="data/help/red_warning.png" width="30" height="30">
+>
+> Be sure that the dataset you use for testing does not contain data that has been used for the 
+> training of your machine learning model. The same stands for every machine-learning related analysis.
+
+# Miscellaneous
+
+## Logging
+While working, information on the inner functioning of the application is logged into a log file. 
+You can find the logging information in `FireLearnConsole/firelearn.log`. 
+
+It reports the states the application is, and also records if any error occurred. 
 ## Support
+You can help with the development of the project by reporting any issue or request using the 'issues' section of the github below, or by e-mail at  
+`willy.lutz@irim.cnrs.fr` by specifying 'FireLearn console issue' (or suggestion) in the object. 
+
+The error message in the [logs](#logging) file is mandatory to report any error.
+
 
 ## Authors and acknowledgement
 
+My name is Willy Lutz, sole developer of this project. I am an engineer working at the CNRS -
+National Center of Scientific Research, in France. I thank warmly my colleagues who have helped me 
+to define the needs a biologist might have, and have guided me for the best.
+
+Of course this project still needs a lot of improvements, so feel free to submit any idea using 
+[the support section](#support).  
+
+
 ## Licence
 
+FireLearn GUI has been developed by a third party and displays a basic MIT Licence.
+
+
 ## Project status
+
+In development, for personal use only - LUTZ W. 2023
 

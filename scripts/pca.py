@@ -1,13 +1,13 @@
-import random
+import logging
+import os
+
 import numpy as np
 import pandas as pd
+import toml
 from fiiireflyyy.learn import confidence_ellipse
 from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
-import os
-import logging
-import toml
 
 with open(os.path.join(os.getcwd(), "config/pca.toml")) as f:
     config = toml.load(f)
@@ -88,7 +88,6 @@ def set_legend(ax):
 
 
 def setup_pca():
-    # fig, ax = self.view.figures["pca"]
     plt.close()
     logger.info("Setting up")
     fig, ax = plt.subplots(figsize=(config["figure"]["width"], config["figure"]["height"]))

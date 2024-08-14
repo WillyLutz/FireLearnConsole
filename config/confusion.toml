@@ -1,5 +1,5 @@
 [model]
-path = "data/model.rfc"
+path = "data/model.rfc"  # a trained model
 train = ["NI T48 B", "TAHV T48 B"]
 test = ["NI T48 B", "TAHV T48 B"]
 
@@ -21,12 +21,11 @@ font = "DejaVu Sans"
     label = "my title"
     size = 14
 
-
-    [figure.cbar]
+    [figure.cbar] # color bar
     shrink =  0.5
     location = 'right'
 
-    [figure.annot]
+    [figure.annot]  # scores and CUP
     size = 12
 
     [figure.axes]

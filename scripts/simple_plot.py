@@ -6,10 +6,14 @@ import pandas as pd
 from PIL import Image
 from matplotlib import pyplot as plt
 
+logging.getLogger("matplotlib").setLevel(logging.WARNING)
+logging.getLogger("pillow").setLevel(logging.WARNING)
+
 with open(os.path.join(os.getcwd(), "config/simple_plot.toml")) as f:
     config = toml.load(f)
 
 logger = logging.getLogger("__simple_plot__")
+
 
 
 def set_ticks(ax, n_val, ymin, ymax):

@@ -3,19 +3,19 @@ dataset = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DAT
 target_column = "label"
 fit = ["NI T48 B", "TAHV T48 B"]
 apply = ["NI T48 B", "TAHV T48 B"]
-n_components = 3
-show_ratio = true
-ellipsis = true
+n_components = 3  # 2 or 3
+show_ratio = true  # display the ratio of the components in the axis label
+ellipsis = true  # Show a confidence ellipsis based on co-variance (only for 2 components)
 
 [figure]
 show = true
 dpi = 100
-save = "output/pca.png"
+save = "output/pca3D.png"
 
 font = "DejaVu Sans"
 width = 8
 height = 8
-marker_size = 1
+marker_size = 12
 marker = "."
 colors = ['blue', 'red', 'green', 'orange']
 alphas = [1, 1, 1, 1, ]

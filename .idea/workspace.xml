@@ -4,32 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FireLearnConsole.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/analysis.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/confusion.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/feature_importance.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/firelearn.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/learn.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/pca.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/process.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/simple_plot.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firelearn.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firelearn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/ClfTester.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/confusion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/data_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/feature_importance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/learning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/pca.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/simple_plot.py" afterDir="false" />
+    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.0.1&#10;update readme for processing">
+      <change afterPath="$PROJECT_DIR$/data/help/confusion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/help/feature_importance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/help/metrics.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/help/model.rfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/help/pca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/help/simple_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/README-gui.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/confusion.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/confusion.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/feature_importance.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/feature_importance.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/firelearn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/firelearn.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/learn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/learn.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/pca.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/pca.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/simple_plot.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/simple_plot.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firelearn.out" beforeDir="false" afterPath="$PROJECT_DIR$/firelearn.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firelearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/firelearn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pca.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/pca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/simple_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/simple_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/simple_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/simple_plot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;WillyLutz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/WillyLutz/FireLearnConsole.git&quot;,
+    &quot;accountId&quot;: &quot;27d16355-b6a7-4bbc-ae27-80c890776cb3&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -55,25 +64,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.firelearn.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/wlutz/PycharmProjects/FireLearnConsole/scripts&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.firelearn.executor": "Run",
+    "Python.python 3.10.12.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/wlutz/PycharmProjects/FireLearnConsole/data/help",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/help" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/help" />
+      <recent name="$PROJECT_DIR$/output" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.firelearn">
     <configuration name="firelearn" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="FireLearnConsole" />
       <option name="ENV_FILES" value="" />
@@ -97,6 +112,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="python 3.10.12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FireLearnConsole" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="3.10.12" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.firelearn" />
+      <item itemvalue="Python.python 3.10.12" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.python 3.10.12" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -114,7 +160,47 @@
       <option name="presentableId" value="Default" />
       <updated>1720513620369</updated>
     </task>
+    <task id="LOCAL-00001" summary="v0.0.1&#10;a ready-to-test version. Unstable for general use.">
+      <option name="closed" value="true" />
+      <created>1723543523009</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723543523009</updated>
+    </task>
+    <task id="LOCAL-00002" summary="v0.0.1&#10;add requirements">
+      <option name="closed" value="true" />
+      <created>1723547330627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723547330627</updated>
+    </task>
+    <task id="LOCAL-00003" summary="v0.0.1&#10;test for tutorial">
+      <option name="closed" value="true" />
+      <created>1723550048592</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723550048592</updated>
+    </task>
+    <task id="LOCAL-00004" summary="v0.0.1&#10;update readme for processing">
+      <option name="closed" value="true" />
+      <created>1723558087238</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723558087238</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v0.0.1&#10;a ready-to-test version. Unstable for general use." />
+    <MESSAGE value="v0.0.1&#10;add requirements" />
+    <MESSAGE value="v0.0.1&#10;test for tutorial" />
+    <MESSAGE value="v0.0.1&#10;update readme for processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.1&#10;update readme for processing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

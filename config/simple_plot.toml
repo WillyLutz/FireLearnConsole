@@ -1,29 +1,29 @@
 [dataset]
+# Absolute path recquired
 path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
-target_column = "label"
-targets = ["NI T48 B", "TAHV T48 B"]
+target_column = "label"  # The column name containing the labels
+targets = ["NI T48 B", "TAHV T48 B"]  # The labels that will be plotted
 
 [figure]
-show = true
+show = true  # or false
 dpi = 100
-save = "output/simple_plot.png"
+save = "output/simple_plot.png"  # empty to disable
 
 font = "DejaVu Sans"
 width = 8
 height = 8
 linewidth = 1
-linestyle = "solid"
+linestyle = "solid"  # dotted, dashed, dashdot, solid
 
 colors = ['blue', 'red', 'green', 'orange']
 alpha = 1
 fillalpha = 0.4
 
 [title]
-label = "Principal component analysis"
+label = "Amplitude plot by features"
 size = 14
 
 [axes]
-
 xlabel = "Features"
 xsize = 12
 ylabel = "Amplitude [pV]"
@@ -33,20 +33,20 @@ ysize = 12
 xrot = 0
 xsize = 12
 xround = 2
-nx = 7
+nx = 7  # number of x ticks
 
 yrot = 0
 ysize = 12
 yround = 2
-ny = 5
+ny = 5 # number of y ticks
 
 [legend]
 enable = true
-draggable = true
+draggable = true  # When showed, allow the leggend to be mouse draggable
 n_cols = 1
 size = 12
 alpha = 1
 framealpha = 0.5
 anchor = "best" # ['best', 'upper left', 'upper right', 'lower left', 'lower right', 'upper center', 'lower center', 'center left', 'center right', 'center', 'custom']
-xpos = 0
-ypos = 0
+xpos = 0  # used if anchor = 'costom'
+ypos = 0  # used if anchor = 'costom'

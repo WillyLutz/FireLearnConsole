@@ -153,9 +153,11 @@ def learn():
     all_train_metrics = []
     all_test_metrics = []
     
+    if config['dataset']['split']:
+        split_dataset()
+        
+        
     rfc, X_train, y_train, X_test, y_test = setup_learn()
-
-    
     logger.info("Training initiated")
     for iteration in range(int(config["model"]["train"]["n_iter"])):
         clf_tester = ClfTester(rfc)
@@ -188,3 +190,36 @@ def learn():
             for line in metrics_elements:
                 f.write(line+"\n")
         
+
+def split_dataset():
+    logger.info(f"Splitting dataset {config['dataset']['split']}")
+    ratio = config["dataset"]["ratio"]
+    path = config['dataset']['split']
+
+    if path:
+        df = pd.read_csv(path)
+        train_sets = []
+        test_sets = []
+        labels = list(set(list(df["label"])))
+        for label in labels:
+            dfl = df[df["label"] == label]
+            dfl.reset_index(inplace=True, drop=True)
+            y = dfl["label"]
+            # y = self.label_encoding(y)
+            X = dfl.loc[:, df.columns != "label"]
+            X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=ratio)
+            X_train["label"] = y_train
+            X_test["label"] = y_test
+            train_sets.append(X_train)
+            test_sets.append(X_test)
+
+        train_df = pd.concat(train_sets, ignore_index=True)
+        train_df.reset_index(inplace=True, drop=True)
+        test_df = pd.concat(test_sets, ignore_index=True)
+        test_df.reset_index(inplace=True, drop=True)
+
+        base_path = path.split(".")
+        train_df.to_csv(base_path[0]+"_Xy_train." + base_path[1], index=False)
+        test_df.to_csv(base_path[0] + "_Xy_test." + base_path[1], index=False)
+
+        logger.info("Splitting done")

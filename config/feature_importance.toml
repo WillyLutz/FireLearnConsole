@@ -1,17 +1,16 @@
 [model]
-path = "data/model.rfc"
-
+path = "data/model.rfc"  # path of the model to test
 
 [figure]
 show = true
 dpi = 100
-save = "output/feature_importance.png"
+save = "output/feature_importance.png"  # empty to disable
 
 font = "DejaVu Sans"
 width = 8
 height = 8
 linewidth = 1
-linestyle = "solid" # dotted, dashed, dashdot
+linestyle = "solid"  # dotted, dashed, dashdot, solid
 color = 'blue'
 alpha = 1
 fill = "below" #none, above

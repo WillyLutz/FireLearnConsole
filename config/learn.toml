@@ -1,7 +1,8 @@
 [model]
+# Absolute path recquired
 load = ""
-save_model = "output/model.rfc"
-save_metrics = "output/metrics.txt"
+save_model = "output/model.rfc"  # empty to disable
+save_metrics = "output/metrics.txt"  # empty to disable
 
 [model.train]
     targets = ["NI T48 B", "TAHV T48 B"]
@@ -18,6 +19,9 @@ save_metrics = "output/metrics.txt"
         criterion = 'gini'
 
 [dataset]
+# empty to disable
+split = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated.csv"
+ratio = 0.7
 train = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_train.csv"
 test = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
 target_column = "label"

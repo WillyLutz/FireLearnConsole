@@ -1,0 +1,39 @@
+CLASSIFICATION METRICS
+---------------------------------------------------------------
+
+Number of training iterations: 3
+Number of testing iterations: 3
+Training accuracy: 1.0 ± 0.0
+Testing accuracy: 1.0 ± 0.0
+
+TRAINING------------------------
+---
+Target: NI T48 B
+Number of true predictions: 567
+Number of false predictions: 1
+CUP for true predictions: 0.97 ± 0.033
+CUP for false predictions: 0.0 ± 0.0
+
+---
+Target: TAHV T48 B
+Number of true predictions: 567
+Number of false predictions: 1
+CUP for true predictions: 0.975 ± 0.036
+CUP for false predictions: 0.0 ± 0.0
+
+
+TESTING------------------------
+---
+Target: NI T48 B
+Number of true predictions: 243
+Number of false predictions: 1
+CUP for true predictions: 0.922 ± 0.063
+CUP for false predictions: 0.0 ± 0.0
+
+---
+Target: TAHV T48 B
+Number of true predictions: 243
+Number of false predictions: 1
+CUP for true predictions: 0.926 ± 0.09
+CUP for false predictions: 0.0 ± 0.0
+
