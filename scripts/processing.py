@@ -161,6 +161,7 @@ def process():
     # ------------------------------------------------
     logger.info(f"File processing...")
     logger.debug(f"filesorter = {config['filesorter']}")
+    logger.debug(f"Row selection = {config['signal']['select_rows']}")
     logger.debug(f"Column selection = {config['signal']['select_columns']}")
     logger.debug(f"Subdivision = {config['signal']['subdivide']}")
     logger.debug(f"Filtering = {config['signal']['filtering']}")
@@ -177,7 +178,8 @@ def process():
         else:
             df = pd.read_csv(file, index_col=False)
         
-        df = df.loc[10:20, :]
+        if config['signal']['select_row']['enable']:
+            df = df.loc[config['signal']['select_row']['start']:config['signal']['select_row']['end'], :]
         
         # select columns
         if config["signal"]["select_columns"]["number"]:
@@ -312,6 +314,10 @@ def check_params():
     
     if config['filesorter']['enable_multiple'] and not config['filesorter']['multiple']['parent_directory']:
         raise ValueError('toml: You have to select a parent directory to use multiple file analysis.')
+    
+    if config['signal']['select_rows']['enable']:
+        if config['signal']['select_rows']['start'] > config['signal']['select_rows']['end']:
+            raise ValueError('toml: On row selection, le first index must be inferior to the second.')
     
     for key, value in config['filesorter']['multiple']['targets'].items():
         fcs = value_has_forbidden_character(value)

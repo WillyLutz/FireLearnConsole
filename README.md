@@ -1,4 +1,4 @@
-# FireLearn Console v0.1.2
+# FireLearn Console v0.2.0
 
 FireLearn Console (FLC) is a console-driven application developed by Willy Lutz that 
 aims to provide an easy way to analyze multiple numerical data, such as electrical 
@@ -11,7 +11,7 @@ Everything the user needs to know will be explained thoroughly in this document.
 
 # Table of contents
 
-- [FireLearn Console v0.1.1](#firelearn-console-v012)
+- [FireLearn Console v0.2.0](#firelearn-console-v020)
 - [Table of contents](#table-of-contents)
 - [Installation and usage](#installation-and-usage)
   - [Installation](#installation)
@@ -31,6 +31,7 @@ Everything the user needs to know will be explained thoroughly in this document.
       - [Indicating targets for learning](#indicating-targets-for-learning)
       - [Single file analysis](#single-file-analysis)
       - [Beheading](#beheading)
+      - [Selecting rows](#selecting-rows)
       - [Selecting columns](#selecting-columns)
       - [Recordings down sampling](#recordings-down-sampling)
       - [Filtering](#filtering)
@@ -347,6 +348,19 @@ behead = 6
 Beheads the n first lines of the csv file (to use if there are metadata on the first lines 
 of the csv file, for instance).
 Be aware that after this step there must not be anything apart from the data and a row of headers, in the data file.
+
+#### Selecting rows
+```toml
+[signal]
+[signal.select_rows]
+enable = false
+start = 0  # first index for row selection
+end = 0  # second index for row selection
+```
+
+Allow to select a range of rows for the processing. Note that the indexes `start` and `end` 
+start count from the `behead` variable. Also, `start` < `end`.
+
 #### Selecting columns
 ```toml
 [signal]

@@ -26,6 +26,11 @@ fft = 10000  # in Hz. 0 to disable
 average = true
 interpolation = 300 # 0 to disable
 
+    [signal.select_rows]
+    enable = true
+    start = 0
+    end = 0
+
     [signal.select_columns]
     mode = "max" # select columns by their maximum metric
     metric = "std"  # Metric used to select columns
