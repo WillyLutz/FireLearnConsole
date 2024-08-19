@@ -313,7 +313,7 @@ def check_params():
     if config['filesorter']['enable_multiple'] and not config['filesorter']['multiple']['parent_directory']:
         raise ValueError('toml: You have to select a parent directory to use multiple file analysis.')
     
-    for key, value in config['filesorter']['multiple']['targets']:
+    for key, value in config['filesorter']['multiple']['targets'].items():
         fcs = value_has_forbidden_character(value)
         if fcs:
             raise ValueError(f'toml: target value {value} has a forbidden character {fcs}')

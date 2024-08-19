@@ -9,3 +9,25 @@ Traceback (most recent call last):
   File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 307, in check_params
     if config['filesorter']['enable_multiple'] and config['filesorter']['single']['path']:
 KeyError: 'path'
+'2024-08-19 14:44' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-08-19 14:44' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
+'2024-08-19 14:44' — __main__ — ERROR — <module>:48 — too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
+    processing.process()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
+    check_params()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 316, in check_params
+    for key, value in config['filesorter']['multiple']['targets']:
+ValueError: too many values to unpack (expected 2)
+'2024-08-19 14:45' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-08-19 14:45' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
+'2024-08-19 14:45' — __main__ — ERROR — <module>:48 — too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
+    processing.process()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
+    check_params()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 317, in check_params
+    for key, value in config['filesorter']['multiple']['targets']:
+ValueError: too many values to unpack (expected 2)
