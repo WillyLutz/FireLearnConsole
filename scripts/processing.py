@@ -177,6 +177,8 @@ def process():
         else:
             df = pd.read_csv(file, index_col=False)
         
+        df = df.loc[10:20, :]
+        
         # select columns
         if config["signal"]["select_columns"]["number"]:
             df = dpr.top_n_electrodes(df, config["signal"]["select_columns"]["number"],
@@ -302,10 +304,10 @@ def value_has_forbidden_character(value):
 
 
 def check_params():
-    if config['filesorter']['enable_multiple'] and config['filesorter']['single']['path']:
+    if config['filesorter']['enable_multiple'] and config['filesorter']['single']['file']:
         raise ValueError('toml: You can only chose one between Single file analysis or Multiple files.')
     
-    if not config['filesorter']['enable_multiple'] and not config['filesorter']['single']['path']:
+    if not config['filesorter']['enable_multiple'] and not config['filesorter']['single']['file']:
         raise ValueError('toml: You have to enable one between Single file analysis or Multiple files.')
     
     if config['filesorter']['enable_multiple'] and not config['filesorter']['multiple']['parent_directory']:
