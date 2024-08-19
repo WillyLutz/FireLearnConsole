@@ -118,6 +118,7 @@ def save_object(obj, path):
     pickle.dump(obj, file)
     file.close()
 
+
 def setup_learn():
     logger.info("fetching parameters")
     rfc_params = config["model"]["params"]["rfc"]
@@ -140,6 +141,10 @@ def setup_learn():
     y_test = label_encoding(y_test)
     X_test = test_df.loc[:, test_df.columns != target_column]
     
+    logger.debug(f"X train shape = {X_train.shape}")
+    logger.debug(f"X test shape = {X_test.shape}")
+    logger.debug(f"y train shape = {y_train.shape}")
+    logger.debug(f"y test shape = {y_test.shape}")
     
     logger.info("Setting up model")
     rfc = RandomForestClassifier()
@@ -147,7 +152,9 @@ def setup_learn():
     
     return rfc, X_train, y_train, X_test, y_test
 
+
 def learn():
+    check_params()
     all_test_scores = []
     all_train_scores = []
     all_train_metrics = []
@@ -155,8 +162,7 @@ def learn():
     
     if config['dataset']['split']:
         split_dataset()
-        
-        
+    
     rfc, X_train, y_train, X_test, y_test = setup_learn()
     logger.info("Training initiated")
     for iteration in range(int(config["model"]["train"]["n_iter"])):
@@ -172,7 +178,7 @@ def learn():
             all_train_metrics.append(clf_tester.train_metrics)
         all_test_scores.append(clf_tester.test_acc)
         all_test_metrics.append(clf_tester.test_metrics)
-        
+    
     logger.info("Displaying results")
     metrics_elements = []
     metrics_elements = learning_display_computed_metrics(metrics_elements,
@@ -183,19 +189,22 @@ def learn():
         print(x)
     
     if config["model"]["save_model"]:
+        logger.info("Saving model")
         save_object(rfc, config["model"]["save_model"])
-        
+    
     if config["model"]["save_metrics"]:
+        logger.info("Saving metrics")
         with open(config["model"]["save_metrics"], "w") as f:
             for line in metrics_elements:
-                f.write(line+"\n")
-        
+                f.write(line + "\n")
+
 
 def split_dataset():
     logger.info(f"Splitting dataset {config['dataset']['split']}")
+    logger.debug(f"Splitting ratio = {config['dataset']['ratio']}")
     ratio = config["dataset"]["ratio"]
     path = config['dataset']['split']
-
+    
     if path:
         df = pd.read_csv(path)
         train_sets = []
@@ -212,14 +221,26 @@ def split_dataset():
             X_test["label"] = y_test
             train_sets.append(X_train)
             test_sets.append(X_test)
-
+        
         train_df = pd.concat(train_sets, ignore_index=True)
         train_df.reset_index(inplace=True, drop=True)
         test_df = pd.concat(test_sets, ignore_index=True)
         test_df.reset_index(inplace=True, drop=True)
-
+        
         base_path = path.split(".")
-        train_df.to_csv(base_path[0]+"_Xy_train." + base_path[1], index=False)
+        train_df.to_csv(base_path[0] + "_Xy_train." + base_path[1], index=False)
         test_df.to_csv(base_path[0] + "_Xy_test." + base_path[1], index=False)
-
+        
         logger.info("Splitting done")
+
+def check_params():
+    if not config['model']['train']['targets']:
+        raise ValueError('toml: at least one target is required for learning.')
+    
+    if config['model']['train']['n_iter'] < 1:
+        raise ValueError('toml: n_iter must be >= 1.')
+    
+    if not config['dataset']['target_column']:
+        raise ValueError('toml: no target column')
+    
+    

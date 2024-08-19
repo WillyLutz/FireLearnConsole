@@ -18,6 +18,7 @@ logger = logging.getLogger("__confusion__")
 
 
 def draw():
+    check_params()
     logger.info("Setting up confusion")
     df = pd.read_csv(config["dataset"]["path"], index_col=False)
     df = df[df[config["dataset"]["target_column"]].isin(config["model"]["test"])]
@@ -64,4 +65,14 @@ def draw():
         plt.show()
     
     plt.close()
-    fl.plot_pca()
+    
+
+def check_params():
+    if not config['model']['path']:
+        raise ValueError('toml: no model loaded, path is emtpy.')
+    
+    if not config['dataset']['path']:
+        raise ValueError('toml: no dataset loaded, path is emtpy.')
+    
+    if not config['dataset']['target_column']:
+        raise ValueError('toml: no target column.')

@@ -15,6 +15,7 @@ with open(os.path.join(os.getcwd(), "config/feature_importance.toml")) as f:
 logger = logging.getLogger("__feat_imp__")
 
 def draw():
+    check_params()
     logger.info("Setting up model")
     
     clf = pickle.load(open(config["model"]["path"], "rb"))
@@ -103,3 +104,7 @@ def draw():
         plt.show()
     
     plt.close()
+    
+def check_params():
+    if not config['model']['path']:
+        raise ValueError('toml: no model loaded, path is emtpy.')

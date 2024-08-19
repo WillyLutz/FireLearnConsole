@@ -4,6 +4,7 @@ import sys
 import os
 import time
 
+import fiiireflyyy.logic_gates
 import numpy as np
 import toml
 import logging
@@ -136,6 +137,7 @@ def filename_preparation():
 
 
 def process():
+    check_params()
     all_files = task_preparation()
     behead = config["signal"]["behead"] if config["signal"]["behead"] else 0
     processed_files_to_make_dataset = []
@@ -153,14 +155,24 @@ def process():
                                        config["signal"]["harmonics"]["nth"],
                                        config["signal"]["harmonics"]["type"], )
     
+    logger.debug(f"Harmonics = {harmonics}")
     # ------------------------------------------------
     #             FILE PROCESSING
     # ------------------------------------------------
     logger.info(f"File processing...")
+    logger.debug(f"filesorter = {config['filesorter']}")
+    logger.debug(f"Column selection = {config['signal']['select_columns']}")
+    logger.debug(f"Subdivision = {config['signal']['subdivide']}")
+    logger.debug(f"Filtering = {config['signal']['filtering']}")
+    logger.debug(f"Filtering harmonics = {config['signal']['harmonics']}")
+    logger.debug(f"FFT = {config['signal']['fft']}")
+    logger.debug(f"Averaging signals = {config['signal']['average']}")
+    logger.debug(f"Interpolation = {config['signal']['interpolation']}")
+    
+    n_file = 1
     for file in all_files:
+        logger.info(f"processing file {file}")
         if behead:
-            logger.info(f"processing file {file}")
-            logger.debug("Beheading raw files")
             df = pd.read_csv(file, index_col=False, skiprows=behead, dtype=np.float64)
         else:
             df = pd.read_csv(file, index_col=False)
@@ -169,7 +181,6 @@ def process():
         if config["signal"]["select_columns"]["number"]:
             df = dpr.top_n_electrodes(df, config["signal"]["select_columns"]["number"],
                                       config["signal"]["index_col"])
-        
         # subdividing
         if config["signal"]["subdivide"]:
             samples = fp.equal_samples(df, config["signal"]["subdivide"])
@@ -249,10 +260,11 @@ def process():
                 processed_files_to_make_dataset.append((df_s_processed, file))
             n_samples += 1
         
-        logger.info(f"File processed : \'{file}\'")
+        logger.info(f"Files processed : {n_file}/{len(all_files)}")
+        n_file += 1
     
     if config["save"]["make_as_dataset"]:
-        logger.info(f"Building dataset...")
+        logger.info(f"Building dataset... {len(processed_files_to_make_dataset)} files to process")
         first_df = processed_files_to_make_dataset[0][0]
         dataset = pd.DataFrame(columns=[str(x) for x in range(len(first_df.values))])
         targets = pd.DataFrame(columns=['label', ])
@@ -276,3 +288,63 @@ def process():
             index=False)
         
         logger.info("Processing completed.")
+
+
+def value_has_forbidden_character(value):
+    # forbidden_characters = "<>:\"/\\|?*[]" with slashes
+    forbidden_characters = "<>:\"|?*[]"
+    found_forbidden = []
+    for fc in forbidden_characters:
+        if fc in value:
+            found_forbidden.append(fc)
+    
+    return found_forbidden
+
+
+def check_params():
+    if config['filesorter']['enable_multiple'] and config['filesorter']['single']['path']:
+        raise ValueError('toml: You can only chose one between Single file analysis or Multiple files.')
+    
+    if not config['filesorter']['enable_multiple'] and not config['filesorter']['single']['path']:
+        raise ValueError('toml: You have to enable one between Single file analysis or Multiple files.')
+    
+    if config['filesorter']['enable_multiple'] and not config['filesorter']['multiple']['parent_directory']:
+        raise ValueError('toml: You have to select a parent directory to use multiple file analysis.')
+    
+    for key, value in config['filesorter']['multiple']['targets']:
+        fcs = value_has_forbidden_character(value)
+        if fcs:
+            raise ValueError(f'toml: target value {value} has a forbidden character {fcs}')
+    
+    if config['signal']['harmonics']['enable']:
+        if config['signal']['harmonics']['nth']:
+            harmonic = config['signal']['harmonics']['frequency']
+            nth = config['signal']['harmonics']['nth']
+            frequency = config['signal']['filtering']['sampling_frequency']
+            if harmonic * nth > frequency / 2:
+                raise ValueError("Toml: The chosen nth harmonic is superior to half the sampling frequency."
+                                 f" Please use maximum nth harmonic as nth<{int((frequency / 2) / harmonic)}")
+        else:
+            raise ValueError("toml: You have to fill both the harmonic frequency and the nth harmonics"
+                             " using valid numbers.")
+    
+    if not fiiireflyyy.logic_gates.AND([config['signal']['filtering']['order'],
+                                        config['signal']['filtering']['sampling_frequency'],
+                                        config['signal']['filtering']['first_freq']]):
+        raise ValueError('toml: You have to fill at least the filter order, sampling '
+                         'frequency, and first frequency to use the filtering function.')
+    
+    if config["signal"]["filtering"]["enable"] and not config['signal']['filtering']['first_freq']:
+        raise ValueError('toml: To filter, the first frequency is mandatory')
+    
+    if config['signal']['filtering']['type'] in ['bandpass', 'bandstop']:
+        if not config['signal']['filtering']['first_freq'] and not config['signal']['filtering']['second_freq']:
+            raise ValueError('toml: both the first and second frequency are need when using filters of type bandstop '
+                             'or bandpass')
+        
+        if config['signal']['filtering']['first_freq'] <= config['signal']['filtering']['second_freq']:
+            raise ValueError('toml: When using bandpass or bandstop filters, second freq > first freq')
+        
+    if not config['save']['make_as_dataset'] and not config['filesorter']['enable_multiple']:
+        raise ValueError('toml: The "make dataset" option is available only if "Merge" and "Multiple files analysis" '
+                         'are both True.')

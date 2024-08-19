@@ -21,15 +21,15 @@ index_col = "TimeStamp [µs]"
 # putting value to 0 disables the parameter
 behead = 6
 
-subdivide = 30
-fft = 10000  # in Hz
+subdivide = 30 # 0 to disable
+fft = 10000  # in Hz. 0 to disable
 average = true
-interpolation = 300
+interpolation = 300 # 0 to disable
 
     [signal.select_columns]
     mode = "max" # select columns by their maximum metric
     metric = "std"  # Metric used to select columns
-    number = 35  # number of columns to select, based on mode and metric
+    number = 35  # number of columns to select, based on mode and metric. 0 to disable
 
     [signal.filtering]
     enable = true

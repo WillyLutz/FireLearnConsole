@@ -15,7 +15,6 @@ with open(os.path.join(os.getcwd(), "config/simple_plot.toml")) as f:
 logger = logging.getLogger("__simple_plot__")
 
 
-
 def set_ticks(ax, n_val, ymin, ymax):
     x_data = [i for i in range(n_val)]
     xmin = min(x_data)
@@ -87,6 +86,7 @@ def set_legend(ax):
 
 
 def draw():
+    check_params()
     logger.info("Plotting dataset")
     fig, ax = plt.subplots(figsize=(config["figure"]["width"], config["figure"]["height"]))
     
@@ -131,3 +131,17 @@ def draw():
     
     # self.view.figures["plot"] = (fig, ax)
     # self.view.canvas["plot"].draw()
+
+
+def check_params():
+    if not config['dataset']['path']:
+        raise ValueError("toml: 'path' is missing, no dataset loaded.")
+    
+    if not len(config['figure']['colors']) >= len(config['dataset']['targets']):
+        raise ValueError("toml: not enough colors for the number of targets")
+    
+    if not config['dataset']['targets']:
+        raise ValueError("toml: 'targets' is empty. At least one label is required.")
+    
+    
+    

@@ -19,7 +19,7 @@ save_metrics = "output/metrics.txt"  # empty to disable
         criterion = 'gini'
 
 [dataset]
-# empty to disable
+# empty to disable splitting
 split = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated.csv"
 ratio = 0.7
 train = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_train.csv"

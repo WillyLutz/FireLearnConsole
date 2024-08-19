@@ -187,6 +187,7 @@ def setup_labels(ax, ratio):
 
 
 def pca2D():
+    check_params()
     labels_to_apply = config["pca"]["apply"]
     label_column = config["pca"]["target_column"]
     
@@ -250,6 +251,7 @@ def pca2D():
 
 
 def pca3D():
+    check_params()
     logger.info("Drawing PCA 3D")
     
     labels_to_apply = config["pca"]["apply"]
@@ -311,3 +313,23 @@ def pca3D():
         plt.show()
     
     plt.close()
+
+
+def check_params():
+    if not config['pca']['dataset']:
+        raise ValueError("toml: 'path' is missing, no dataset loaded.")
+    
+    if not len(config['figure']['colors']) >= len(config['pca']['apply']):
+        raise ValueError("toml: not enough colors for the number of targets")
+    
+    if not len(config['figure']['alphas']) >= len(config['pca']['apply']):
+        raise ValueError("toml: not enough alphas for the number of targets")
+    
+    if not config['pca']['apply']:
+        raise ValueError("toml: 'apply' is empty. At least one label is required.")
+    
+    if not config['pca']['fit']:
+        raise ValueError("toml: 'fit' is empty. At least one label is required.")
+
+
+
