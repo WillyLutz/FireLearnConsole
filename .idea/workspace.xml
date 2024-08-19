@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.0.1&#10;logging implementation (need to log things, now)">
+    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.1.0&#10;alpha version">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/learn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/learn.toml" afterDir="false" />
@@ -199,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723643508484</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="v0.1.0&#10;alpha version">
+      <option name="closed" value="true" />
+      <created>1724064923137</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724064923137</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -212,7 +220,8 @@
     <MESSAGE value="v0.0.1&#10;update readme for processing" />
     <MESSAGE value="v0.0.1&#10;readme completion" />
     <MESSAGE value="v0.0.1&#10;logging implementation (need to log things, now)" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.1&#10;logging implementation (need to log things, now)" />
+    <MESSAGE value="v0.1.0&#10;alpha version" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.1.0&#10;alpha version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
