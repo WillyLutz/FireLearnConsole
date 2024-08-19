@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.1.0&#10;alpha version">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/learn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/learn.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/process.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/process.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/firelearn.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/firelearn.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/confusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/confusion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/feature_importance.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/feature_importance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/learning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/simple_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/simple_plot.py" afterDir="false" />
+    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.1.1&#10;update readme">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724064923137</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="v0.1.1&#10;update readme">
+      <option name="closed" value="true" />
+      <created>1724065020117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724065020117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -221,7 +219,8 @@
     <MESSAGE value="v0.0.1&#10;readme completion" />
     <MESSAGE value="v0.0.1&#10;logging implementation (need to log things, now)" />
     <MESSAGE value="v0.1.0&#10;alpha version" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.1.0&#10;alpha version" />
+    <MESSAGE value="v0.1.1&#10;update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.1.1&#10;update readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -258,6 +257,18 @@
           <option name="totalLines" value="20465797" />
           <option name="info" value="v0.0.1&#10;logging implementation (need to log things," />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1724064930428" />
+          <option name="linesCode" value="5649787" />
+          <option name="totalLines" value="20467051" />
+          <option name="info" value="v0.1.0&#10;alpha version" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1724065023004" />
+          <option name="linesCode" value="5649832" />
+          <option name="totalLines" value="20467096" />
+          <option name="info" value="v0.1.1&#10;update readme" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -267,6 +278,12 @@
           <option name="linesCode" value="5649684" />
           <option name="totalLines" value="20465797" />
           <option name="info" value="14 août 2024" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1724065023004" />
+          <option name="linesCode" value="5649832" />
+          <option name="totalLines" value="20467096" />
+          <option name="info" value="19 août 2024" />
         </TimePoint>
       </list>
     </option>

@@ -1,4 +1,4 @@
-# FireLearn Console v0.0.1
+# FireLearn Console v0.1.2
 
 FireLearn Console (FLC) is a console-driven application developed by Willy Lutz that 
 aims to provide an easy way to analyze multiple numerical data, such as electrical 
@@ -11,6 +11,51 @@ Everything the user needs to know will be explained thoroughly in this document.
 
 # Table of contents
 
+- [FireLearn Console v0.1.1](#firelearn-console-v012)
+- [Table of contents](#table-of-contents)
+- [Installation and usage](#installation-and-usage)
+  - [Installation](#installation)
+    - [Clone via git](#clone-via-git)
+    - [Set up a virtual environment](#set-up-a-virtual-environment)
+    - [Make the project executable](#make-the-project-executable)
+    - [Update the project](#update-the-project)
+  - [How to use](#how-to-use)
+    - [Available arguments](#available-arguments)
+    - [The .toml configuration files](#the-toml-configuration-files)
+- [Walkthrough](#walkthrough)
+  - [Processing](#processing)
+    - [Example: directory structure](#example-directory-structure)
+    - [Sorting multiple files](#sorting-multiple-files)
+      - [Selecting parent directory](#selecting-parent-directory)
+      - [Include and exclude files for the processing](#include-and-exclude-files-for-the-processing)
+      - [Indicating targets for learning](#indicating-targets-for-learning)
+      - [Single file analysis](#single-file-analysis)
+      - [Beheading](#beheading)
+      - [Selecting columns](#selecting-columns)
+      - [Recordings down sampling](#recordings-down-sampling)
+      - [Filtering](#filtering)
+      - [Fast Fourier Transform](#fast-fourier-transform)
+      - [Interpolation](#interpolation)
+      - [Averaging columns](#averaging-columns)
+      - [Resulting datasets](#resulting-datasets)
+      - [Post-processing](#post-processing)
+  - [Learning](#learning)
+    - [Load and save](#load-and-save)
+    - [Training and testing](#training-and-testing)
+    - [Tuning the model](#tuning-the-model)
+    - [Dataset selection and split](#dataset-selection-and-split)
+  - [Analysis](#analysis)
+    - [Common configuration variables](#common-configuration-variables)
+    - [Simple plots](#simple-plots)
+    - [Feature importance](#feature-importance)
+    - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+    - [Confusion matrix](#confusion-matrix)
+- [Miscellaneous](#miscellaneous)
+  - [Logging](#logging)
+  - [Support](#support)
+  - [Authors and acknowledgement](#authors-and-acknowledgement)
+  - [Licence](#licence)
+  - [Project status](#project-status)
 
 
 # Installation and usage
@@ -642,10 +687,12 @@ You can find the logging information in `FireLearnConsole/firelearn.log`.
 
 It reports the states the application is, and also records if any error occurred. 
 ## Support
-You can help with the development of the project by reporting any issue or request using the 'issues' section of the github below, or by e-mail at  
+You can help with the development of the project by reporting any issue or request using 
+[the 'issues' section](#https://github.com/WillyLutz/FireLearnConsole/issues) of the GitHub, or by e-mail at  
 `willy.lutz@irim.cnrs.fr` by specifying 'FireLearn console issue' (or suggestion) in the object. 
 
 The error message in the [logs](#logging) file is mandatory to report any error.
+
 
 
 ## Authors and acknowledgement
