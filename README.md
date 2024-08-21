@@ -638,7 +638,8 @@ Configuration file : `pca.toml`
 
 Enabled using `-pca` command line argument.
 
-<img src="data/help/pca2D.png" width="400" height="400"> 
+<img src="data/help/pca2D.png" width="400" height="400">
+
 <img src="data/help/pca3D.png" width="400" height="400">
 
 ```toml
