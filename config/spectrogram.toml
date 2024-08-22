@@ -1,0 +1,19 @@
+[dataset]
+## Absolute path recquired
+path = '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-54-44 TAHV 2 24H Analog.csv'
+
+
+[signal]
+
+index_col = "TimeStamp [µs]"
+# putting value to 0 disables the parameter
+behead = 6
+
+start_index = 0
+end_index = 0  # 0 to disable the index selection
+
+column_index = 10
+
+sampling_frequency = 10000  # in Hz. 0 to disable
+average = true
+interpolation = 300 # 0 to disable

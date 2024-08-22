@@ -4,7 +4,7 @@ import logging
 import toml
 import logging.config
 
-from scripts import processing, learning, confusion, feature_importance, pca, simple_plot
+from scripts import processing, learning, confusion, feature_importance, pca, simple_plot, spectrogram
 
 with open(os.path.join(os.getcwd(), "config/firelearn.toml")) as f:
     config = toml.load(f)
@@ -22,7 +22,7 @@ logging.getLogger("PIL.PngImagePlugin").setLevel(logging.WARNING)
 logging.config.fileConfig("logs/logging.config", disable_existing_loggers=False)
 logger = logging.getLogger("__main__")
 
-args = sys.argv
+args = sys.argv[1:]
 if __name__ == '__main__':
     logger.info("NEW RUN")
     logger.debug(args)
@@ -44,6 +44,10 @@ if __name__ == '__main__':
         
         if "-plot" in args:
             simple_plot.draw()
+            
+        if '-s' in args:
+            spectrogram.draw()
+            
     except Exception as e:
         logger.exception(e)
         print(e)

@@ -1,67 +1,22 @@
-'2024-08-19 14:42' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-19 14:42' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
-'2024-08-19 14:42' — __main__ — ERROR — <module>:48 — 'path'
+'2024-08-22 15:39' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-08-22 15:39' — __main__ — DEBUG — <module>:28 — ['-p']
+'2024-08-22 15:39' — __main__ — ERROR — <module>:52 — 'start'
 Traceback (most recent call last):
   File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
     processing.process()
   File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
     check_params()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 307, in check_params
-    if config['filesorter']['enable_multiple'] and config['filesorter']['single']['path']:
-KeyError: 'path'
-'2024-08-19 14:44' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-19 14:44' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
-'2024-08-19 14:44' — __main__ — ERROR — <module>:48 — too many values to unpack (expected 2)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 319, in check_params
+    if config['signal']['select_rows']['start'] > config['signal']['select_rows']['end']:
+KeyError: 'start'
+'2024-08-22 15:39' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-08-22 15:39' — __main__ — DEBUG — <module>:28 — ['-p']
+'2024-08-22 15:39' — __main__ — ERROR — <module>:52 — toml: When using bandpass or bandstop filters, second freq > first freq
 Traceback (most recent call last):
   File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
     processing.process()
   File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
     check_params()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 316, in check_params
-    for key, value in config['filesorter']['multiple']['targets']:
-ValueError: too many values to unpack (expected 2)
-'2024-08-19 14:45' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-19 14:45' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
-'2024-08-19 14:45' — __main__ — ERROR — <module>:48 — too many values to unpack (expected 2)
-Traceback (most recent call last):
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
-    processing.process()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
-    check_params()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 317, in check_params
-    for key, value in config['filesorter']['multiple']['targets']:
-ValueError: too many values to unpack (expected 2)
-'2024-08-19 14:45' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-19 14:45' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
-'2024-08-19 14:45' — __process__ — INFO — task_preparation:48 — Getting files
-'2024-08-19 14:45' — __process__ — DEBUG — task_preparation:59 — Files used for processing: ['/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-20-19 NI 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-21-23 NI 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-22-47 NI 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/8/2022-12-08T13-25-24 NI 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/8/2022-12-08T13-26-41 NI 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/8/2022-12-08T13-27-45 NI 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/9/2022-12-08T13-30-15 NI 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/9/2022-12-08T13-31-18 NI 3  24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/9/2022-12-08T13-32-21 NI 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/7/2022-12-06T10-49-10 TAHV 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/7/2022-12-06T10-50-16 TAHV 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/7/2022-12-06T10-51-19 TAHV 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-53-41 TAHV 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-54-44 TAHV 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-55-48 TAHV 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/9/2022-12-06T10-58-13 TAHV 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/9/2022-12-06T10-59-16 TAHV 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/9/2022-12-06T11-00-21 TAHV 3 24H Analog.csv']
-'2024-08-19 14:45' — __process__ — INFO — task_preparation:84 — Number of tasks : 40176
-'2024-08-19 14:45' — __process__ — INFO — process:150 — Harmonics generation...
-'2024-08-19 14:45' — __process__ — DEBUG — process:158 — Harmonics = []
-'2024-08-19 14:45' — __process__ — INFO — process:162 — File processing...
-'2024-08-19 14:45' — __process__ — DEBUG — process:163 — filesorter = {'enable_multiple': True, 'multiple': {'parent_directory': '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H', 'to_include': ['Analog.csv'], 'to_exclude': ['TTX'], 'targets': {'NI': 'Mock', 'TAHV': 'Tahv'}}, 'single': {'file': ''}}
-'2024-08-19 14:45' — __process__ — DEBUG — process:164 — Column selection = {'mode': 'max', 'metric': 'std', 'number': 35}
-'2024-08-19 14:45' — __process__ — DEBUG — process:165 — Subdivision = 30
-'2024-08-19 14:45' — __process__ — DEBUG — process:166 — Filtering = {'enable': True, 'order': 3, 'sampling_frequency': 10000, 'type': 'highpass', 'first_freq': 50, 'second_freq': 0}
-'2024-08-19 14:45' — __process__ — DEBUG — process:167 — Filtering harmonics = {'enable': True, 'order': 3, 'type': 'all', 'frequency': 50, 'nth': 35}
-'2024-08-19 14:45' — __process__ — DEBUG — process:168 — FFT = 10000
-'2024-08-19 14:45' — __process__ — DEBUG — process:169 — Averaging signals = True
-'2024-08-19 14:45' — __process__ — DEBUG — process:170 — Interpolation = 300
-'2024-08-19 14:45' — __process__ — INFO — process:174 — processing file /media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-20-19 NI 1 24H Analog.csv
-'2024-08-19 14:56' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-19 14:56' — __main__ — DEBUG — <module>:28 — ['/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py', '-p']
-'2024-08-19 14:56' — __process__ — INFO — task_preparation:48 — Getting files
-'2024-08-19 14:56' — __process__ — DEBUG — task_preparation:59 — Files used for processing: ['/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-20-19 NI 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-21-23 NI 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-22-47 NI 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/8/2022-12-08T13-25-24 NI 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/8/2022-12-08T13-26-41 NI 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/8/2022-12-08T13-27-45 NI 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/9/2022-12-08T13-30-15 NI 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/9/2022-12-08T13-31-18 NI 3  24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/9/2022-12-08T13-32-21 NI 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/7/2022-12-06T10-49-10 TAHV 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/7/2022-12-06T10-50-16 TAHV 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/7/2022-12-06T10-51-19 TAHV 1 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-53-41 TAHV 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-54-44 TAHV 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/8/2022-12-06T10-55-48 TAHV 2 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/9/2022-12-06T10-58-13 TAHV 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/9/2022-12-06T10-59-16 TAHV 3 24H Analog.csv', '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/TAHV/9/2022-12-06T11-00-21 TAHV 3 24H Analog.csv']
-'2024-08-19 14:56' — __process__ — INFO — task_preparation:84 — Number of tasks : 40176
-'2024-08-19 14:56' — __process__ — INFO — process:150 — Harmonics generation...
-'2024-08-19 14:56' — __process__ — DEBUG — process:158 — Harmonics = []
-'2024-08-19 14:56' — __process__ — INFO — process:162 — File processing...
-'2024-08-19 14:56' — __process__ — DEBUG — process:163 — filesorter = {'enable_multiple': True, 'multiple': {'parent_directory': '/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H', 'to_include': ['Analog.csv'], 'to_exclude': ['TTX'], 'targets': {'NI': 'Mock', 'TAHV': 'Tahv'}}, 'single': {'file': ''}}
-'2024-08-19 14:56' — __process__ — DEBUG — process:164 — Column selection = {'mode': 'max', 'metric': 'std', 'number': 35}
-'2024-08-19 14:56' — __process__ — DEBUG — process:165 — Subdivision = 30
-'2024-08-19 14:56' — __process__ — DEBUG — process:166 — Filtering = {'enable': True, 'order': 3, 'sampling_frequency': 10000, 'type': 'highpass', 'first_freq': 50, 'second_freq': 0}
-'2024-08-19 14:56' — __process__ — DEBUG — process:167 — Filtering harmonics = {'enable': True, 'order': 3, 'type': 'all', 'frequency': 50, 'nth': 35}
-'2024-08-19 14:56' — __process__ — DEBUG — process:168 — FFT = 10000
-'2024-08-19 14:56' — __process__ — DEBUG — process:169 — Averaging signals = True
-'2024-08-19 14:56' — __process__ — DEBUG — process:170 — Interpolation = 300
-'2024-08-19 14:56' — __process__ — INFO — process:174 — processing file /media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H/NI/7/2022-12-08T13-20-19 NI 1 24H Analog.csv
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 354, in check_params
+    raise ValueError('toml: When using bandpass or bandstop filters, second freq > first freq')
+ValueError: toml: When using bandpass or bandstop filters, second freq > first freq

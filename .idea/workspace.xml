@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.2.0&#10;add row selection feature" />
+    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.2.0&#10;readme fix">
+      <change afterPath="$PROJECT_DIR$/config/spectrogram.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/spectrogram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/process.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/process.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firelearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/firelearn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/firelearn.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/firelearn.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,17 +48,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.firelearn.executor": "Debug",
-    "Python.python 3.10.12.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "aem-ide.servers.initialized": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/wlutz/PycharmProjects/FireLearnConsole/data/help",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.firelearn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.python 3.10.12.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;aem-ide.servers.initialized&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/wlutz/PycharmProjects/FireLearnConsole/data/help&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/help" />
@@ -235,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724072984262</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="v0.2.0&#10;readme fix">
+      <option name="closed" value="true" />
+      <created>1724231717573</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724231717573</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -254,7 +269,8 @@
     <MESSAGE value="v0.1.3&#10;bug on check params - processing" />
     <MESSAGE value="v0.1.4&#10;bug on check params - processing" />
     <MESSAGE value="v0.2.0&#10;add row selection feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.2.0&#10;add row selection feature" />
+    <MESSAGE value="v0.2.0&#10;readme fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.2.0&#10;readme fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -298,6 +314,12 @@
           <option name="totalLines" value="20467096" />
           <option name="info" value="v0.1.1&#10;update readme" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1724231724957" />
+          <option name="linesCode" value="5649849" />
+          <option name="totalLines" value="20471668" />
+          <option name="info" value="v0.2.0&#10;readme fix" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -313,6 +335,12 @@
           <option name="linesCode" value="5649832" />
           <option name="totalLines" value="20467096" />
           <option name="info" value="19 août 2024" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1724231724957" />
+          <option name="linesCode" value="5649849" />
+          <option name="totalLines" value="20471668" />
+          <option name="info" value="21 août 2024" />
         </TimePoint>
       </list>
     </option>

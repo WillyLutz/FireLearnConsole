@@ -179,7 +179,7 @@ def process():
             df = pd.read_csv(file, index_col=False)
         
         if config['signal']['select_row']['enable']:
-            df = df.loc[config['signal']['select_row']['start']:config['signal']['select_row']['end'], :]
+            df = df.loc[config['signal']['select_row']['start_index']:config['signal']['select_row']['end_index'], :]
         
         # select columns
         if config["signal"]["select_columns"]["number"]:
@@ -316,7 +316,7 @@ def check_params():
         raise ValueError('toml: You have to select a parent directory to use multiple file analysis.')
     
     if config['signal']['select_rows']['enable']:
-        if config['signal']['select_rows']['start'] > config['signal']['select_rows']['end']:
+        if config['signal']['select_rows']['start_index'] > config['signal']['select_rows']['end_index']:
             raise ValueError('toml: On row selection, le first index must be inferior to the second.')
     
     for key, value in config['filesorter']['multiple']['targets'].items():
@@ -350,7 +350,7 @@ def check_params():
             raise ValueError('toml: both the first and second frequency are need when using filters of type bandstop '
                              'or bandpass')
         
-        if config['signal']['filtering']['first_freq'] <= config['signal']['filtering']['second_freq']:
+        if config['signal']['filtering']['first_freq'] >= config['signal']['filtering']['second_freq']:
             raise ValueError('toml: When using bandpass or bandstop filters, second freq > first freq')
         
     if not config['save']['make_as_dataset'] and not config['filesorter']['enable_multiple']:
