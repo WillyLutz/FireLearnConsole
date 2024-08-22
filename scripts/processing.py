@@ -178,8 +178,8 @@ def process():
         else:
             df = pd.read_csv(file, index_col=False)
         
-        if config['signal']['select_row']['enable']:
-            df = df.loc[config['signal']['select_row']['start_index']:config['signal']['select_row']['end_index'], :]
+        if config['signal']['select_rows']['enable']:
+            df = df.loc[config['signal']['select_rows']['start_index']:config['signal']['select_rows']['end_index'], :]
         
         # select columns
         if config["signal"]["select_columns"]["number"]:
