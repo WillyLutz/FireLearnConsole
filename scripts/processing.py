@@ -24,16 +24,16 @@ logger = logging.getLogger("__process__")
 def generate_harmonics(freq, nth, mode):
     harmonics = []
     step = freq
-    if mode == 'All':
+    if mode.lower() == 'all':
         for i in range(nth):
             harmonics.append(freq)
             freq = freq + step
-    if mode == "Even":
+    if mode.lower() == "even":
         for i in range(nth):
             if i % 2 == 0:
                 harmonics.append(freq)
                 freq = freq + step
-    if mode == "Odd":
+    if mode.lower() == "odd":
         for i in range(nth):
             if i % 2 == 1:
                 harmonics.append(freq)
@@ -179,7 +179,8 @@ def process():
             df = pd.read_csv(file, index_col=False)
         
         if config['signal']['select_rows']['enable']:
-            df = df.loc[config['signal']['select_rows']['start_index']:config['signal']['select_rows']['end_index'], :]
+            if len(df.index) >= config['signal']['select_rows']['end_index']:
+                df = df.loc[config['signal']['select_rows']['start_index']:config['signal']['select_rows']['end_index'], :]
         
         # select columns
         if config["signal"]["select_columns"]["number"]:
@@ -317,7 +318,7 @@ def check_params():
     
     if config['signal']['select_rows']['enable']:
         if config['signal']['select_rows']['start_index'] > config['signal']['select_rows']['end_index']:
-            raise ValueError('toml: On row selection, le first index must be inferior to the second.')
+            raise ValueError('toml: On row selection, the first index must be inferior to the second.')
     
     for key, value in config['filesorter']['multiple']['targets'].items():
         fcs = value_has_forbidden_character(value)

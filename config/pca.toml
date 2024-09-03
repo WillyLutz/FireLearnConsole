@@ -1,27 +1,27 @@
 [pca]
-dataset = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
+dataset ="/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/DATASETS/Dataset_DisabledFlow_all_conditions_harmonics_filtered_merged_hours.csv"
 target_column = "label"
-fit = ["NI T48 B", "TAHV T48 B"]
-apply = ["NI T48 B", "TAHV T48 B"]
-n_components = 3  # 2 or 3
+fit = ["DisabledFlow Ctl T=16", "DisabledFlow GW_NoEV T=16"]
+apply = ["DisabledFlow Ctl T=16" , "DisabledFlow GW_NoEV T=16", "DisabledFlow NoGW_EV T=16", "DisabledFlow GW_EV T=16", "DisabledFlow GW_EV T=0", "DisabledFlow GW_EV T=1", "DisabledFlow GW_EV T=2", "DisabledFlow GW_EV T=3", "DisabledFlow GW_EV T=4", "DisabledFlow GW_EV T=5", "DisabledFlow GW_EV T=6", "DisabledFlow GW_EV T=7", "DisabledFlow GW_EV T=8", "DisabledFlow GW_EV T=9", "DisabledFlow GW_EV T=10", "DisabledFlow GW_EV T=11", "DisabledFlow GW_EV T=12", "DisabledFlow GW_EV T=13", "DisabledFlow GW_EV T=14", "DisabledFlow GW_EV T=15", ]
+n_components = 2  # 2 or 3
 show_ratio = true  # display the ratio of the components in the axis label
 ellipsis = true  # Show a confidence ellipsis based on co-variance (only for 2 components)
 
 [figure]
-show = false
+show = true
 dpi = 100
-save = "output/pca3D.png"
+save = ""
 
 font = "DejaVu Sans"
 width = 8
 height = 8
 marker_size = 12
 marker = "."
-colors = ['blue', 'red', 'green', 'orange']
-alphas = [1, 1, 1, 1, ]
+colors = ['blue', 'red', 'green', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange']
+alphas = ["1", "1", "1", "1", "0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2",]
 
     [figure.title]
-    label = "Principal component analysis"
+    label = "Effect of EVs on electrical activity"
     size = 14
 
     [figure.axes]

@@ -1,25 +1,26 @@
 [model]
-path = "data/model.rfc"  # a trained model
-train = ["NI T48 B", "TAHV T48 B"]
-test = ["NI T48 B", "TAHV T48 B"]
+path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/MODELS/DisabledFlow Harmonics filtered ctl t16 vs gw_noev t16.rfc"  # a trained model
+train = ["DisabledFlow Ctl T=16" , "DisabledFlow GW_NoEV T=16", ]
+test = ["DisabledFlow Ctl T=16" , "DisabledFlow GW_NoEV T=16", "DisabledFlow NoGW_EV T=16", "DisabledFlow GW_EV T=16", ]
 
 [dataset]
-path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
+path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/DATASETS/Dataset_DisabledFlow_all_conditions_harmonics_filtered_merged_hours_Xy_test.csv"
 target_column = "label"
 
 [figure]
 iterations = 3
 mode = "percent"
 show = true
-dpi = 100
-save = "output/confusion.png"
+dpi = 600
+save = "" # empty to disable
+export_data = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/RESULTS/confusion results.csv" # empty to disable. '.csv' extension required
 
 width = 8
 height = 8
 font = "DejaVu Sans"
     [figure.title]
-    label = "my title"
-    size = 14
+    label = "Effect of EVs on electrical activity"
+    size = 16
 
     [figure.cbar] # color bar
     shrink =  0.5
@@ -29,6 +30,7 @@ font = "DejaVu Sans"
     size = 12
 
     [figure.axes]
+    split_labels = " "
     xlabel = "The input is classified as"
     xsize = 12
     ylabel = "The input is"

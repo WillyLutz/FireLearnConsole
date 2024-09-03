@@ -211,18 +211,18 @@ def pca2D():
                    marker=config["figure"]["marker"],
                    color=config["figure"]["colors"][l],
                    # todo known exception : len(colors) >= len(labels to apply)
-                   alpha=config["figure"]["alphas"][l],  # todo same here
+                   alpha=float(config["figure"]["alphas"][l]),  # todo same here
                    label=label
                    )
         if config["pca"]["ellipsis"]:
             ax.scatter(np.mean(x_data), np.mean(y_data),
                        marker="+",
                        color=config["figure"]["colors"][l],
-                       alpha=config["figure"]["alphas"][l],
+                       alpha=float(config["figure"]["alphas"][l]),
                        linewidth=2,
                        s=160)
             confidence_ellipse(x_data, y_data, ax, n_std=1.0,
-                               alpha=config["figure"]["alphas"][l],
+                               alpha=float(config["figure"]["alphas"][l]),
                                color=config["figure"]["colors"][l],
                                fill=False, linewidth=2)
     

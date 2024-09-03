@@ -2,13 +2,387 @@
 enable_multiple = true
     [filesorter.multiple]
     # Absolute path required
-    parent_directory="/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATA/-DRUG/T=24H"
-    to_include = ['Analog.csv', ]
-    to_exclude = ['TTX', ]
+    parent_directory="/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/"
+    to_include = ['Analog.csv', "DisabledFlow", ]
+    to_exclude = ['EnabledFlow', ]
 
     [filesorter.multiple.targets]
-    'NI' = 'Mock'
-    'TAHV' = 'Tahv'
+    '_CTL_DisabledFlow_T=0_M=10_' = 'DisabledFlow Ctl T=0_M=10'
+    '_NoGW_EV_DisabledFlow_T=0_M=10_' = 'DisabledFlow NoGW_EV T=0_M=10'
+    '_GW_EV_DisabledFlow_T=0_M=10_' = 'DisabledFlow GW_EV T=0_M=10'
+    '_GW_NoEV_DisabledFlow_T=0_M=10_' = 'DisabledFlow GW_NoEV T=0_M=10'
+
+    '_CTL_DisabledFlow_T=0_M=30_' = 'DisabledFlow Ctl T=0_M=30'
+    '_NoGW_EV_DisabledFlow_T=0_M=30_' = 'DisabledFlow NoGW_EV T=0_M=30'
+    '_GW_EV_DisabledFlow_T=0_M=30_' = 'DisabledFlow GW_EV T=0_M=30'
+    '_GW_NoEV_DisabledFlow_T=0_M=30_' = 'DisabledFlow GW_NoEV T=0_M=30'
+
+    '_CTL_DisabledFlow_T=0_M=50_' = 'DisabledFlow Ctl T=0_M=50'
+    '_NoGW_EV_DisabledFlow_T=0_M=50_' = 'DisabledFlow NoGW_EV T=0_M=50'
+    '_GW_EV_DisabledFlow_T=0_M=50_' = 'DisabledFlow GW_EV T=0_M=50'
+    '_GW_NoEV_DisabledFlow_T=0_M=50_' = 'DisabledFlow GW_NoEV T=0_M=50'
+
+    '_CTL_DisabledFlow_T=1_M=10_' = 'DisabledFlow Ctl T=1_M=10'
+    '_NoGW_EV_DisabledFlow_T=1_M=10_' = 'DisabledFlow NoGW_EV T=1_M=10'
+    '_GW_EV_DisabledFlow_T=1_M=10_' = 'DisabledFlow GW_EV T=1_M=10'
+    '_GW_NoEV_DisabledFlow_T=1_M=10_' = 'DisabledFlow GW_NoEV T=1_M=10'
+
+    '_CTL_DisabledFlow_T=1_M=30_' = 'DisabledFlow Ctl T=1_M=30'
+    '_NoGW_EV_DisabledFlow_T=1_M=30_' = 'DisabledFlow NoGW_EV T=1_M=30'
+    '_GW_EV_DisabledFlow_T=1_M=30_' = 'DisabledFlow GW_EV T=1_M=30'
+    '_GW_NoEV_DisabledFlow_T=1_M=30_' = 'DisabledFlow GW_NoEV T=1_M=30'
+
+    '_CTL_DisabledFlow_T=1_M=50_' = 'DisabledFlow Ctl T=1_M=50'
+    '_NoGW_EV_DisabledFlow_T=1_M=50_' = 'DisabledFlow NoGW_EV T=1_M=50'
+    '_GW_EV_DisabledFlow_T=1_M=50_' = 'DisabledFlow GW_EV T=1_M=50'
+    '_GW_NoEV_DisabledFlow_T=1_M=50_' = 'DisabledFlow GW_NoEV T=1_M=50'
+
+    '_CTL_DisabledFlow_T=2_M=10_' = 'DisabledFlow Ctl T=2_M=10'
+    '_NoGW_EV_DisabledFlow_T=2_M=10_' = 'DisabledFlow NoGW_EV T=2_M=10'
+    '_GW_EV_DisabledFlow_T=2_M=10_' = 'DisabledFlow GW_EV T=2_M=10'
+    '_GW_NoEV_DisabledFlow_T=2_M=10_' = 'DisabledFlow GW_NoEV T=2_M=10'
+
+    '_CTL_DisabledFlow_T=2_M=30_' = 'DisabledFlow Ctl T=2_M=30'
+    '_NoGW_EV_DisabledFlow_T=2_M=30_' = 'DisabledFlow NoGW_EV T=2_M=30'
+    '_GW_EV_DisabledFlow_T=2_M=30_' = 'DisabledFlow GW_EV T=2_M=30'
+    '_GW_NoEV_DisabledFlow_T=2_M=30_' = 'DisabledFlow GW_NoEV T=2_M=30'
+
+    '_CTL_DisabledFlow_T=2_M=50_' = 'DisabledFlow Ctl T=2_M=50'
+    '_NoGW_EV_DisabledFlow_T=2_M=50_' = 'DisabledFlow NoGW_EV T=2_M=50'
+    '_GW_EV_DisabledFlow_T=2_M=50_' = 'DisabledFlow GW_EV T=2_M=50'
+    '_GW_NoEV_DisabledFlow_T=2_M=50_' = 'DisabledFlow GW_NoEV T=2_M=50'
+
+    '_CTL_DisabledFlow_T=3_M=10_' = 'DisabledFlow Ctl T=3_M=10'
+    '_NoGW_EV_DisabledFlow_T=3_M=10_' = 'DisabledFlow NoGW_EV T=3_M=10'
+    '_GW_EV_DisabledFlow_T=3_M=10_' = 'DisabledFlow GW_EV T=3_M=10'
+    '_GW_NoEV_DisabledFlow_T=3_M=10_' = 'DisabledFlow GW_NoEV T=3_M=10'
+
+    '_CTL_DisabledFlow_T=3_M=30_' = 'DisabledFlow Ctl T=3_M=30'
+    '_NoGW_EV_DisabledFlow_T=3_M=30_' = 'DisabledFlow NoGW_EV T=3_M=30'
+    '_GW_EV_DisabledFlow_T=3_M=30_' = 'DisabledFlow GW_EV T=3_M=30'
+    '_GW_NoEV_DisabledFlow_T=3_M=30_' = 'DisabledFlow GW_NoEV T=3_M=30'
+
+    '_CTL_DisabledFlow_T=3_M=50_' = 'DisabledFlow Ctl T=3_M=50'
+    '_NoGW_EV_DisabledFlow_T=3_M=50_' = 'DisabledFlow NoGW_EV T=3_M=50'
+    '_GW_EV_DisabledFlow_T=3_M=50_' = 'DisabledFlow GW_EV T=3_M=50'
+    '_GW_NoEV_DisabledFlow_T=3_M=50_' = 'DisabledFlow GW_NoEV T=3_M=50'
+
+    '_CTL_DisabledFlow_T=4_M=10_' = 'DisabledFlow Ctl T=4_M=10'
+    '_NoGW_EV_DisabledFlow_T=4_M=10_' = 'DisabledFlow NoGW_EV T=4_M=10'
+    '_GW_EV_DisabledFlow_T=4_M=10_' = 'DisabledFlow GW_EV T=4_M=10'
+    '_GW_NoEV_DisabledFlow_T=4_M=10_' = 'DisabledFlow GW_NoEV T=4_M=10'
+
+    '_CTL_DisabledFlow_T=4_M=30_' = 'DisabledFlow Ctl T=4_M=30'
+    '_NoGW_EV_DisabledFlow_T=4_M=30_' = 'DisabledFlow NoGW_EV T=4_M=30'
+    '_GW_EV_DisabledFlow_T=4_M=30_' = 'DisabledFlow GW_EV T=4_M=30'
+    '_GW_NoEV_DisabledFlow_T=4_M=30_' = 'DisabledFlow GW_NoEV T=4_M=30'
+
+    '_CTL_DisabledFlow_T=4_M=50_' = 'DisabledFlow Ctl T=4_M=50'
+    '_NoGW_EV_DisabledFlow_T=4_M=50_' = 'DisabledFlow NoGW_EV T=4_M=50'
+    '_GW_EV_DisabledFlow_T=4_M=50_' = 'DisabledFlow GW_EV T=4_M=50'
+    '_GW_NoEV_DisabledFlow_T=4_M=50_' = 'DisabledFlow GW_NoEV T=4_M=50'
+
+    '_CTL_DisabledFlow_T=5_M=10_' = 'DisabledFlow Ctl T=5_M=10'
+    '_NoGW_EV_DisabledFlow_T=5_M=10_' = 'DisabledFlow NoGW_EV T=5_M=10'
+    '_GW_EV_DisabledFlow_T=5_M=10_' = 'DisabledFlow GW_EV T=5_M=10'
+    '_GW_NoEV_DisabledFlow_T=5_M=10_' = 'DisabledFlow GW_NoEV T=5_M=10'
+
+    '_CTL_DisabledFlow_T=5_M=30_' = 'DisabledFlow Ctl T=5_M=30'
+    '_NoGW_EV_DisabledFlow_T=5_M=30_' = 'DisabledFlow NoGW_EV T=5_M=30'
+    '_GW_EV_DisabledFlow_T=5_M=30_' = 'DisabledFlow GW_EV T=5_M=30'
+    '_GW_NoEV_DisabledFlow_T=5_M=30_' = 'DisabledFlow GW_NoEV T=5_M=30'
+
+    '_CTL_DisabledFlow_T=5_M=50_' = 'DisabledFlow Ctl T=5_M=50'
+    '_NoGW_EV_DisabledFlow_T=5_M=50_' = 'DisabledFlow NoGW_EV T=5_M=50'
+    '_GW_EV_DisabledFlow_T=5_M=50_' = 'DisabledFlow GW_EV T=5_M=50'
+    '_GW_NoEV_DisabledFlow_T=5_M=50_' = 'DisabledFlow GW_NoEV T=5_M=50'
+
+    '_CTL_DisabledFlow_T=6_M=10_' = 'DisabledFlow Ctl T=6_M=10'
+    '_NoGW_EV_DisabledFlow_T=6_M=10_' = 'DisabledFlow NoGW_EV T=6_M=10'
+    '_GW_EV_DisabledFlow_T=6_M=10_' = 'DisabledFlow GW_EV T=6_M=10'
+    '_GW_NoEV_DisabledFlow_T=6_M=10_' = 'DisabledFlow GW_NoEV T=6_M=10'
+
+    '_CTL_DisabledFlow_T=6_M=30_' = 'DisabledFlow Ctl T=6_M=30'
+    '_NoGW_EV_DisabledFlow_T=6_M=30_' = 'DisabledFlow NoGW_EV T=6_M=30'
+    '_GW_EV_DisabledFlow_T=6_M=30_' = 'DisabledFlow GW_EV T=6_M=30'
+    '_GW_NoEV_DisabledFlow_T=6_M=30_' = 'DisabledFlow GW_NoEV T=6_M=30'
+
+    '_CTL_DisabledFlow_T=6_M=50_' = 'DisabledFlow Ctl T=6_M=50'
+    '_NoGW_EV_DisabledFlow_T=6_M=50_' = 'DisabledFlow NoGW_EV T=6_M=50'
+    '_GW_EV_DisabledFlow_T=6_M=50_' = 'DisabledFlow GW_EV T=6_M=50'
+    '_GW_NoEV_DisabledFlow_T=6_M=50_' = 'DisabledFlow GW_NoEV T=6_M=50'
+
+    '_CTL_DisabledFlow_T=7_M=10_' = 'DisabledFlow Ctl T=7_M=10'
+    '_NoGW_EV_DisabledFlow_T=7_M=10_' = 'DisabledFlow NoGW_EV T=7_M=10'
+    '_GW_EV_DisabledFlow_T=7_M=10_' = 'DisabledFlow GW_EV T=7_M=10'
+    '_GW_NoEV_DisabledFlow_T=7_M=10_' = 'DisabledFlow GW_NoEV T=7_M=10'
+
+    '_CTL_DisabledFlow_T=7_M=30_' = 'DisabledFlow Ctl T=7_M=30'
+    '_NoGW_EV_DisabledFlow_T=7_M=30_' = 'DisabledFlow NoGW_EV T=7_M=30'
+    '_GW_EV_DisabledFlow_T=7_M=30_' = 'DisabledFlow GW_EV T=7_M=30'
+    '_GW_NoEV_DisabledFlow_T=7_M=30_' = 'DisabledFlow GW_NoEV T=7_M=30'
+
+    '_CTL_DisabledFlow_T=7_M=50_' = 'DisabledFlow Ctl T=7_M=50'
+    '_NoGW_EV_DisabledFlow_T=7_M=50_' = 'DisabledFlow NoGW_EV T=7_M=50'
+    '_GW_EV_DisabledFlow_T=7_M=50_' = 'DisabledFlow GW_EV T=7_M=50'
+    '_GW_NoEV_DisabledFlow_T=7_M=50_' = 'DisabledFlow GW_NoEV T=7_M=50'
+
+    '_CTL_DisabledFlow_T=8_M=10_' = 'DisabledFlow Ctl T=8_M=10'
+    '_NoGW_EV_DisabledFlow_T=8_M=10_' = 'DisabledFlow NoGW_EV T=8_M=10'
+    '_GW_EV_DisabledFlow_T=8_M=10_' = 'DisabledFlow GW_EV T=8_M=10'
+    '_GW_NoEV_DisabledFlow_T=8_M=10_' = 'DisabledFlow GW_NoEV T=8_M=10'
+
+    '_CTL_DisabledFlow_T=8_M=30_' = 'DisabledFlow Ctl T=8_M=30'
+    '_NoGW_EV_DisabledFlow_T=8_M=30_' = 'DisabledFlow NoGW_EV T=8_M=30'
+    '_GW_EV_DisabledFlow_T=8_M=30_' = 'DisabledFlow GW_EV T=8_M=30'
+    '_GW_NoEV_DisabledFlow_T=8_M=30_' = 'DisabledFlow GW_NoEV T=8_M=30'
+
+    '_CTL_DisabledFlow_T=8_M=50_' = 'DisabledFlow Ctl T=8_M=50'
+    '_NoGW_EV_DisabledFlow_T=8_M=50_' = 'DisabledFlow NoGW_EV T=8_M=50'
+    '_GW_EV_DisabledFlow_T=8_M=50_' = 'DisabledFlow GW_EV T=8_M=50'
+    '_GW_NoEV_DisabledFlow_T=8_M=50_' = 'DisabledFlow GW_NoEV T=8_M=50'
+
+    '_CTL_DisabledFlow_T=9_M=10_' = 'DisabledFlow Ctl T=9_M=10'
+    '_NoGW_EV_DisabledFlow_T=9_M=10_' = 'DisabledFlow NoGW_EV T=9_M=10'
+    '_GW_EV_DisabledFlow_T=9_M=10_' = 'DisabledFlow GW_EV T=9_M=10'
+    '_GW_NoEV_DisabledFlow_T=9_M=10_' = 'DisabledFlow GW_NoEV T=9_M=10'
+
+    '_CTL_DisabledFlow_T=9_M=30_' = 'DisabledFlow Ctl T=9_M=30'
+    '_NoGW_EV_DisabledFlow_T=9_M=30_' = 'DisabledFlow NoGW_EV T=9_M=30'
+    '_GW_EV_DisabledFlow_T=9_M=30_' = 'DisabledFlow GW_EV T=9_M=30'
+    '_GW_NoEV_DisabledFlow_T=9_M=30_' = 'DisabledFlow GW_NoEV T=9_M=30'
+
+    '_CTL_DisabledFlow_T=9_M=50_' = 'DisabledFlow Ctl T=9_M=50'
+    '_NoGW_EV_DisabledFlow_T=9_M=50_' = 'DisabledFlow NoGW_EV T=9_M=50'
+    '_GW_EV_DisabledFlow_T=9_M=50_' = 'DisabledFlow GW_EV T=9_M=50'
+    '_GW_NoEV_DisabledFlow_T=9_M=50_' = 'DisabledFlow GW_NoEV T=9_M=50'
+
+    '_CTL_DisabledFlow_T=10_M=10_' = 'DisabledFlow Ctl T=10_M=10'
+    '_NoGW_EV_DisabledFlow_T=10_M=10_' = 'DisabledFlow NoGW_EV T=10_M=10'
+    '_GW_EV_DisabledFlow_T=10_M=10_' = 'DisabledFlow GW_EV T=10_M=10'
+    '_GW_NoEV_DisabledFlow_T=10_M=10_' = 'DisabledFlow GW_NoEV T=10_M=10'
+
+    '_CTL_DisabledFlow_T=10_M=30_' = 'DisabledFlow Ctl T=10_M=30'
+    '_NoGW_EV_DisabledFlow_T=10_M=30_' = 'DisabledFlow NoGW_EV T=10_M=30'
+    '_GW_EV_DisabledFlow_T=10_M=30_' = 'DisabledFlow GW_EV T=10_M=30'
+    '_GW_NoEV_DisabledFlow_T=10_M=30_' = 'DisabledFlow GW_NoEV T=10_M=30'
+
+    '_CTL_DisabledFlow_T=10_M=50_' = 'DisabledFlow Ctl T=10_M=50'
+    '_NoGW_EV_DisabledFlow_T=10_M=50_' = 'DisabledFlow NoGW_EV T=10_M=50'
+    '_GW_EV_DisabledFlow_T=10_M=50_' = 'DisabledFlow GW_EV T=10_M=50'
+    '_GW_NoEV_DisabledFlow_T=10_M=50_' = 'DisabledFlow GW_NoEV T=10_M=50'
+
+    '_CTL_DisabledFlow_T=11_M=10_' = 'DisabledFlow Ctl T=11_M=10'
+    '_NoGW_EV_DisabledFlow_T=11_M=10_' = 'DisabledFlow NoGW_EV T=11_M=10'
+    '_GW_EV_DisabledFlow_T=11_M=10_' = 'DisabledFlow GW_EV T=11_M=10'
+    '_GW_NoEV_DisabledFlow_T=11_M=10_' = 'DisabledFlow GW_NoEV T=11_M=10'
+
+    '_CTL_DisabledFlow_T=11_M=30_' = 'DisabledFlow Ctl T=11_M=30'
+    '_NoGW_EV_DisabledFlow_T=11_M=30_' = 'DisabledFlow NoGW_EV T=11_M=30'
+    '_GW_EV_DisabledFlow_T=11_M=30_' = 'DisabledFlow GW_EV T=11_M=30'
+    '_GW_NoEV_DisabledFlow_T=11_M=30_' = 'DisabledFlow GW_NoEV T=11_M=30'
+
+    '_CTL_DisabledFlow_T=11_M=50_' = 'DisabledFlow Ctl T=11_M=50'
+    '_NoGW_EV_DisabledFlow_T=11_M=50_' = 'DisabledFlow NoGW_EV T=11_M=50'
+    '_GW_EV_DisabledFlow_T=11_M=50_' = 'DisabledFlow GW_EV T=11_M=50'
+    '_GW_NoEV_DisabledFlow_T=11_M=50_' = 'DisabledFlow GW_NoEV T=11_M=50'
+
+    '_CTL_DisabledFlow_T=12_M=10_' = 'DisabledFlow Ctl T=12_M=10'
+    '_NoGW_EV_DisabledFlow_T=12_M=10_' = 'DisabledFlow NoGW_EV T=12_M=10'
+    '_GW_EV_DisabledFlow_T=12_M=10_' = 'DisabledFlow GW_EV T=12_M=10'
+    '_GW_NoEV_DisabledFlow_T=12_M=10_' = 'DisabledFlow GW_NoEV T=12_M=10'
+
+    '_CTL_DisabledFlow_T=12_M=30_' = 'DisabledFlow Ctl T=12_M=30'
+    '_NoGW_EV_DisabledFlow_T=12_M=30_' = 'DisabledFlow NoGW_EV T=12_M=30'
+    '_GW_EV_DisabledFlow_T=12_M=30_' = 'DisabledFlow GW_EV T=12_M=30'
+    '_GW_NoEV_DisabledFlow_T=12_M=30_' = 'DisabledFlow GW_NoEV T=12_M=30'
+
+    '_CTL_DisabledFlow_T=12_M=50_' = 'DisabledFlow Ctl T=12_M=50'
+    '_NoGW_EV_DisabledFlow_T=12_M=50_' = 'DisabledFlow NoGW_EV T=12_M=50'
+    '_GW_EV_DisabledFlow_T=12_M=50_' = 'DisabledFlow GW_EV T=12_M=50'
+    '_GW_NoEV_DisabledFlow_T=12_M=50_' = 'DisabledFlow GW_NoEV T=12_M=50'
+
+    '_CTL_DisabledFlow_T=13_M=10_' = 'DisabledFlow Ctl T=13_M=10'
+    '_NoGW_EV_DisabledFlow_T=13_M=10_' = 'DisabledFlow NoGW_EV T=13_M=10'
+    '_GW_EV_DisabledFlow_T=13_M=10_' = 'DisabledFlow GW_EV T=13_M=10'
+    '_GW_NoEV_DisabledFlow_T=13_M=10_' = 'DisabledFlow GW_NoEV T=13_M=10'
+
+    '_CTL_DisabledFlow_T=13_M=30_' = 'DisabledFlow Ctl T=13_M=30'
+    '_NoGW_EV_DisabledFlow_T=13_M=30_' = 'DisabledFlow NoGW_EV T=13_M=30'
+    '_GW_EV_DisabledFlow_T=13_M=30_' = 'DisabledFlow GW_EV T=13_M=30'
+    '_GW_NoEV_DisabledFlow_T=13_M=30_' = 'DisabledFlow GW_NoEV T=13_M=30'
+
+    '_CTL_DisabledFlow_T=13_M=50_' = 'DisabledFlow Ctl T=13_M=50'
+    '_NoGW_EV_DisabledFlow_T=13_M=50_' = 'DisabledFlow NoGW_EV T=13_M=50'
+    '_GW_EV_DisabledFlow_T=13_M=50_' = 'DisabledFlow GW_EV T=13_M=50'
+    '_GW_NoEV_DisabledFlow_T=13_M=50_' = 'DisabledFlow GW_NoEV T=13_M=50'
+
+    '_CTL_DisabledFlow_T=14_M=10_' = 'DisabledFlow Ctl T=14_M=10'
+    '_NoGW_EV_DisabledFlow_T=14_M=10_' = 'DisabledFlow NoGW_EV T=14_M=10'
+    '_GW_EV_DisabledFlow_T=14_M=10_' = 'DisabledFlow GW_EV T=14_M=10'
+    '_GW_NoEV_DisabledFlow_T=14_M=10_' = 'DisabledFlow GW_NoEV T=14_M=10'
+
+    '_CTL_DisabledFlow_T=14_M=30_' = 'DisabledFlow Ctl T=14_M=30'
+    '_NoGW_EV_DisabledFlow_T=14_M=30_' = 'DisabledFlow NoGW_EV T=14_M=30'
+    '_GW_EV_DisabledFlow_T=14_M=30_' = 'DisabledFlow GW_EV T=14_M=30'
+    '_GW_NoEV_DisabledFlow_T=14_M=30_' = 'DisabledFlow GW_NoEV T=14_M=30'
+
+    '_CTL_DisabledFlow_T=14_M=50_' = 'DisabledFlow Ctl T=14_M=50'
+    '_NoGW_EV_DisabledFlow_T=14_M=50_' = 'DisabledFlow NoGW_EV T=14_M=50'
+    '_GW_EV_DisabledFlow_T=14_M=50_' = 'DisabledFlow GW_EV T=14_M=50'
+    '_GW_NoEV_DisabledFlow_T=14_M=50_' = 'DisabledFlow GW_NoEV T=14_M=50'
+
+    '_CTL_DisabledFlow_T=15_M=10_' = 'DisabledFlow Ctl T=15_M=10'
+    '_NoGW_EV_DisabledFlow_T=15_M=10_' = 'DisabledFlow NoGW_EV T=15_M=10'
+    '_GW_EV_DisabledFlow_T=15_M=10_' = 'DisabledFlow GW_EV T=15_M=10'
+    '_GW_NoEV_DisabledFlow_T=15_M=10_' = 'DisabledFlow GW_NoEV T=15_M=10'
+
+    '_CTL_DisabledFlow_T=15_M=30_' = 'DisabledFlow Ctl T=15_M=30'
+    '_NoGW_EV_DisabledFlow_T=15_M=30_' = 'DisabledFlow NoGW_EV T=15_M=30'
+    '_GW_EV_DisabledFlow_T=15_M=30_' = 'DisabledFlow GW_EV T=15_M=30'
+    '_GW_NoEV_DisabledFlow_T=15_M=30_' = 'DisabledFlow GW_NoEV T=15_M=30'
+
+    '_CTL_DisabledFlow_T=15_M=50_' = 'DisabledFlow Ctl T=15_M=50'
+    '_NoGW_EV_DisabledFlow_T=15_M=50_' = 'DisabledFlow NoGW_EV T=15_M=50'
+    '_GW_EV_DisabledFlow_T=15_M=50_' = 'DisabledFlow GW_EV T=15_M=50'
+    '_GW_NoEV_DisabledFlow_T=15_M=50_' = 'DisabledFlow GW_NoEV T=15_M=50'
+
+    '_CTL_DisabledFlow_T=16_M=10_' = 'DisabledFlow Ctl T=16_M=10'
+    '_NoGW_EV_DisabledFlow_T=16_M=10_' = 'DisabledFlow NoGW_EV T=16_M=10'
+    '_GW_EV_DisabledFlow_T=16_M=10_' = 'DisabledFlow GW_EV T=16_M=10'
+    '_GW_NoEV_DisabledFlow_T=16_M=10_' = 'DisabledFlow GW_NoEV T=16_M=10'
+
+    '_CTL_DisabledFlow_T=16_M=30_' = 'DisabledFlow Ctl T=16_M=30'
+    '_NoGW_EV_DisabledFlow_T=16_M=30_' = 'DisabledFlow NoGW_EV T=16_M=30'
+    '_GW_EV_DisabledFlow_T=16_M=30_' = 'DisabledFlow GW_EV T=16_M=30'
+    '_GW_NoEV_DisabledFlow_T=16_M=30_' = 'DisabledFlow GW_NoEV T=16_M=30'
+
+    '_CTL_DisabledFlow_T=16_M=50_' = 'DisabledFlow Ctl T=16_M=50'
+    '_NoGW_EV_DisabledFlow_T=16_M=50_' = 'DisabledFlow NoGW_EV T=16_M=50'
+    '_GW_EV_DisabledFlow_T=16_M=50_' = 'DisabledFlow GW_EV T=16_M=50'
+    '_GW_NoEV_DisabledFlow_T=16_M=50_' = 'DisabledFlow GW_NoEV T=16_M=50'
+
+    '_CTL_DisabledFlow_T=17_M=10_' = 'DisabledFlow Ctl T=17_M=10'
+    '_NoGW_EV_DisabledFlow_T=17_M=10_' = 'DisabledFlow NoGW_EV T=17_M=10'
+    '_GW_EV_DisabledFlow_T=17_M=10_' = 'DisabledFlow GW_EV T=17_M=10'
+    '_GW_NoEV_DisabledFlow_T=17_M=10_' = 'DisabledFlow GW_NoEV T=17_M=10'
+
+    '_CTL_DisabledFlow_T=17_M=30_' = 'DisabledFlow Ctl T=17_M=30'
+    '_NoGW_EV_DisabledFlow_T=17_M=30_' = 'DisabledFlow NoGW_EV T=17_M=30'
+    '_GW_EV_DisabledFlow_T=17_M=30_' = 'DisabledFlow GW_EV T=17_M=30'
+    '_GW_NoEV_DisabledFlow_T=17_M=30_' = 'DisabledFlow GW_NoEV T=17_M=30'
+
+    '_CTL_DisabledFlow_T=17_M=50_' = 'DisabledFlow Ctl T=17_M=50'
+    '_NoGW_EV_DisabledFlow_T=17_M=50_' = 'DisabledFlow NoGW_EV T=17_M=50'
+    '_GW_EV_DisabledFlow_T=17_M=50_' = 'DisabledFlow GW_EV T=17_M=50'
+    '_GW_NoEV_DisabledFlow_T=17_M=50_' = 'DisabledFlow GW_NoEV T=17_M=50'
+
+    '_CTL_DisabledFlow_T=18_M=10_' = 'DisabledFlow Ctl T=18_M=10'
+    '_NoGW_EV_DisabledFlow_T=18_M=10_' = 'DisabledFlow NoGW_EV T=18_M=10'
+    '_GW_EV_DisabledFlow_T=18_M=10_' = 'DisabledFlow GW_EV T=18_M=10'
+    '_GW_NoEV_DisabledFlow_T=18_M=10_' = 'DisabledFlow GW_NoEV T=18_M=10'
+
+    '_CTL_DisabledFlow_T=18_M=30_' = 'DisabledFlow Ctl T=18_M=30'
+    '_NoGW_EV_DisabledFlow_T=18_M=30_' = 'DisabledFlow NoGW_EV T=18_M=30'
+    '_GW_EV_DisabledFlow_T=18_M=30_' = 'DisabledFlow GW_EV T=18_M=30'
+    '_GW_NoEV_DisabledFlow_T=18_M=30_' = 'DisabledFlow GW_NoEV T=18_M=30'
+
+    '_CTL_DisabledFlow_T=18_M=50_' = 'DisabledFlow Ctl T=18_M=50'
+    '_NoGW_EV_DisabledFlow_T=18_M=50_' = 'DisabledFlow NoGW_EV T=18_M=50'
+    '_GW_EV_DisabledFlow_T=18_M=50_' = 'DisabledFlow GW_EV T=18_M=50'
+    '_GW_NoEV_DisabledFlow_T=18_M=50_' = 'DisabledFlow GW_NoEV T=18_M=50'
+
+    '_CTL_DisabledFlow_T=19_M=10_' = 'DisabledFlow Ctl T=19_M=10'
+    '_NoGW_EV_DisabledFlow_T=19_M=10_' = 'DisabledFlow NoGW_EV T=19_M=10'
+    '_GW_EV_DisabledFlow_T=19_M=10_' = 'DisabledFlow GW_EV T=19_M=10'
+    '_GW_NoEV_DisabledFlow_T=19_M=10_' = 'DisabledFlow GW_NoEV T=19_M=10'
+
+    '_CTL_DisabledFlow_T=19_M=30_' = 'DisabledFlow Ctl T=19_M=30'
+    '_NoGW_EV_DisabledFlow_T=19_M=30_' = 'DisabledFlow NoGW_EV T=19_M=30'
+    '_GW_EV_DisabledFlow_T=19_M=30_' = 'DisabledFlow GW_EV T=19_M=30'
+    '_GW_NoEV_DisabledFlow_T=19_M=30_' = 'DisabledFlow GW_NoEV T=19_M=30'
+
+    '_CTL_DisabledFlow_T=19_M=50_' = 'DisabledFlow Ctl T=19_M=50'
+    '_NoGW_EV_DisabledFlow_T=19_M=50_' = 'DisabledFlow NoGW_EV T=19_M=50'
+    '_GW_EV_DisabledFlow_T=19_M=50_' = 'DisabledFlow GW_EV T=19_M=50'
+    '_GW_NoEV_DisabledFlow_T=19_M=50_' = 'DisabledFlow GW_NoEV T=19_M=50'
+
+    '_CTL_DisabledFlow_T=20_M=10_' = 'DisabledFlow Ctl T=20_M=10'
+    '_NoGW_EV_DisabledFlow_T=20_M=10_' = 'DisabledFlow NoGW_EV T=20_M=10'
+    '_GW_EV_DisabledFlow_T=20_M=10_' = 'DisabledFlow GW_EV T=20_M=10'
+    '_GW_NoEV_DisabledFlow_T=20_M=10_' = 'DisabledFlow GW_NoEV T=20_M=10'
+
+    '_CTL_DisabledFlow_T=20_M=30_' = 'DisabledFlow Ctl T=20_M=30'
+    '_NoGW_EV_DisabledFlow_T=20_M=30_' = 'DisabledFlow NoGW_EV T=20_M=30'
+    '_GW_EV_DisabledFlow_T=20_M=30_' = 'DisabledFlow GW_EV T=20_M=30'
+    '_GW_NoEV_DisabledFlow_T=20_M=30_' = 'DisabledFlow GW_NoEV T=20_M=30'
+
+    '_CTL_DisabledFlow_T=20_M=50_' = 'DisabledFlow Ctl T=20_M=50'
+    '_NoGW_EV_DisabledFlow_T=20_M=50_' = 'DisabledFlow NoGW_EV T=20_M=50'
+    '_GW_EV_DisabledFlow_T=20_M=50_' = 'DisabledFlow GW_EV T=20_M=50'
+    '_GW_NoEV_DisabledFlow_T=20_M=50_' = 'DisabledFlow GW_NoEV T=20_M=50'
+
+    '_CTL_DisabledFlow_T=21_M=10_' = 'DisabledFlow Ctl T=21_M=10'
+    '_NoGW_EV_DisabledFlow_T=21_M=10_' = 'DisabledFlow NoGW_EV T=21_M=10'
+    '_GW_EV_DisabledFlow_T=21_M=10_' = 'DisabledFlow GW_EV T=21_M=10'
+    '_GW_NoEV_DisabledFlow_T=21_M=10_' = 'DisabledFlow GW_NoEV T=21_M=10'
+
+    '_CTL_DisabledFlow_T=21_M=30_' = 'DisabledFlow Ctl T=21_M=30'
+    '_NoGW_EV_DisabledFlow_T=21_M=30_' = 'DisabledFlow NoGW_EV T=21_M=30'
+    '_GW_EV_DisabledFlow_T=21_M=30_' = 'DisabledFlow GW_EV T=21_M=30'
+    '_GW_NoEV_DisabledFlow_T=21_M=30_' = 'DisabledFlow GW_NoEV T=21_M=30'
+
+    '_CTL_DisabledFlow_T=21_M=50_' = 'DisabledFlow Ctl T=21_M=50'
+    '_NoGW_EV_DisabledFlow_T=21_M=50_' = 'DisabledFlow NoGW_EV T=21_M=50'
+    '_GW_EV_DisabledFlow_T=21_M=50_' = 'DisabledFlow GW_EV T=21_M=50'
+    '_GW_NoEV_DisabledFlow_T=21_M=50_' = 'DisabledFlow GW_NoEV T=21_M=50'
+
+    '_CTL_DisabledFlow_T=22_M=10_' = 'DisabledFlow Ctl T=22_M=10'
+    '_NoGW_EV_DisabledFlow_T=22_M=10_' = 'DisabledFlow NoGW_EV T=22_M=10'
+    '_GW_EV_DisabledFlow_T=22_M=10_' = 'DisabledFlow GW_EV T=22_M=10'
+    '_GW_NoEV_DisabledFlow_T=22_M=10_' = 'DisabledFlow GW_NoEV T=22_M=10'
+
+    '_CTL_DisabledFlow_T=22_M=30_' = 'DisabledFlow Ctl T=22_M=30'
+    '_NoGW_EV_DisabledFlow_T=22_M=30_' = 'DisabledFlow NoGW_EV T=22_M=30'
+    '_GW_EV_DisabledFlow_T=22_M=30_' = 'DisabledFlow GW_EV T=22_M=30'
+    '_GW_NoEV_DisabledFlow_T=22_M=30_' = 'DisabledFlow GW_NoEV T=22_M=30'
+
+    '_CTL_DisabledFlow_T=22_M=50_' = 'DisabledFlow Ctl T=22_M=50'
+    '_NoGW_EV_DisabledFlow_T=22_M=50_' = 'DisabledFlow NoGW_EV T=22_M=50'
+    '_GW_EV_DisabledFlow_T=22_M=50_' = 'DisabledFlow GW_EV T=22_M=50'
+    '_GW_NoEV_DisabledFlow_T=22_M=50_' = 'DisabledFlow GW_NoEV T=22_M=50'
+
+    '_CTL_DisabledFlow_T=23_M=10_' = 'DisabledFlow Ctl T=23_M=10'
+    '_NoGW_EV_DisabledFlow_T=23_M=10_' = 'DisabledFlow NoGW_EV T=23_M=10'
+    '_GW_EV_DisabledFlow_T=23_M=10_' = 'DisabledFlow GW_EV T=23_M=10'
+    '_GW_NoEV_DisabledFlow_T=23_M=10_' = 'DisabledFlow GW_NoEV T=23_M=10'
+
+    '_CTL_DisabledFlow_T=23_M=30_' = 'DisabledFlow Ctl T=23_M=30'
+    '_NoGW_EV_DisabledFlow_T=23_M=30_' = 'DisabledFlow NoGW_EV T=23_M=30'
+    '_GW_EV_DisabledFlow_T=23_M=30_' = 'DisabledFlow GW_EV T=23_M=30'
+    '_GW_NoEV_DisabledFlow_T=23_M=30_' = 'DisabledFlow GW_NoEV T=23_M=30'
+
+    '_CTL_DisabledFlow_T=23_M=50_' = 'DisabledFlow Ctl T=23_M=50'
+    '_NoGW_EV_DisabledFlow_T=23_M=50_' = 'DisabledFlow NoGW_EV T=23_M=50'
+    '_GW_EV_DisabledFlow_T=23_M=50_' = 'DisabledFlow GW_EV T=23_M=50'
+    '_GW_NoEV_DisabledFlow_T=23_M=50_' = 'DisabledFlow GW_NoEV T=23_M=50'
+
+    '_CTL_DisabledFlow_T=24_M=10_' = 'DisabledFlow Ctl T=24_M=10'
+    '_NoGW_EV_DisabledFlow_T=24_M=10_' = 'DisabledFlow NoGW_EV T=24_M=10'
+    '_GW_EV_DisabledFlow_T=24_M=10_' = 'DisabledFlow GW_EV T=24_M=10'
+    '_GW_NoEV_DisabledFlow_T=24_M=10_' = 'DisabledFlow GW_NoEV T=24_M=10'
+
+    '_CTL_DisabledFlow_T=24_M=30_' = 'DisabledFlow Ctl T=24_M=30'
+    '_NoGW_EV_DisabledFlow_T=24_M=30_' = 'DisabledFlow NoGW_EV T=24_M=30'
+    '_GW_EV_DisabledFlow_T=24_M=30_' = 'DisabledFlow GW_EV T=24_M=30'
+    '_GW_NoEV_DisabledFlow_T=24_M=30_' = 'DisabledFlow GW_NoEV T=24_M=30'
+
+    '_CTL_DisabledFlow_T=24_M=50_' = 'DisabledFlow Ctl T=24_M=50'
+    '_NoGW_EV_DisabledFlow_T=24_M=50_' = 'DisabledFlow NoGW_EV T=24_M=50'
+    '_GW_EV_DisabledFlow_T=24_M=50_' = 'DisabledFlow GW_EV T=24_M=50'
+    '_GW_NoEV_DisabledFlow_T=24_M=50_' = 'DisabledFlow GW_NoEV T=24_M=50'
+
+
 
     [filesorter.single]
     # Absolute path required
@@ -21,41 +395,42 @@ index_col = "TimeStamp [µs]"
 # putting value to 0 disables the parameter
 behead = 6
 
-subdivide = 30 # 0 to disable
+subdivide = 60 # 0 to disable
 fft = 10000  # in Hz. 0 to disable
 average = true
-interpolation = 300 # 0 to disable
+interpolation = 500 # 0 to disable
 
     [signal.select_rows]
-    enable = true
-    start = 0
-    end = 0
+    enable = false
+    start_index = 320000
+    end_index = 880000
 
     [signal.select_columns]
     mode = "max" # select columns by their maximum metric
     metric = "std"  # Metric used to select columns
-    number = 35  # number of columns to select, based on mode and metric. 0 to disable
+    number = 15  # number of columns to select, based on mode and metric. 0 to disable
 
     [signal.filtering]
     enable = true
     order = 3
     sampling_frequency = 10000  # in Hz
-    type = 'highpass'  # among 'highpass', 'lowpass', 'bandstop', 'bandpass'
-    first_freq = 50  # in Hz
-    second_freq = 0  # in Hz, only if 'bandstop' or 'bandpass'
+    type = 'bandstop'  # among 'highpass', 'lowpass', 'bandstop', 'bandpass'
+    first_freq = 45  # in Hz
+    second_freq = 55  # in Hz, only if 'bandstop' or 'bandpass'
 
     [signal.harmonics]
     enable = true
     order = 3
     type = 'all' # among 'all', 'even', 'odd'
     frequency = 50  # in Hz
-    nth = 35
+    nth = 13
 
 [save]
 random_key = true
 timestamp = true
 keyword = ""
-filename = ""
+# no extension required
+filename = "Dataset_EnableFlow_preflow_all_conditions_harmonics_filtered"
 # Absolute path required
-save_under = "/home/wlutz/PycharmProjects/FireLearnConsole/output"
+save_under = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/DATASETS/"
 make_as_dataset = true  # or false

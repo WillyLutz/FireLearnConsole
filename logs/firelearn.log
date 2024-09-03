@@ -1,22 +1,82 @@
-'2024-08-22 15:39' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-22 15:39' — __main__ — DEBUG — <module>:28 — ['-p']
-'2024-08-22 15:39' — __main__ — ERROR — <module>:52 — 'start'
+'2024-09-03 09:38' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-09-03 09:38' — __main__ — DEBUG — <module>:28 — ['-pca']
+'2024-09-03 09:38' — __main__ — ERROR — <module>:52 — toml: not enough alphas for the number of targets
 Traceback (most recent call last):
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
-    processing.process()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 43, in <module>
+    pca.draw()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 52, in draw
+    pca()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 56, in pca
+    pca2D()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 190, in pca2D
     check_params()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 319, in check_params
-    if config['signal']['select_rows']['start'] > config['signal']['select_rows']['end']:
-KeyError: 'start'
-'2024-08-22 15:39' — __main__ — INFO — <module>:27 — NEW RUN
-'2024-08-22 15:39' — __main__ — DEBUG — <module>:28 — ['-p']
-'2024-08-22 15:39' — __main__ — ERROR — <module>:52 — toml: When using bandpass or bandstop filters, second freq > first freq
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 326, in check_params
+    raise ValueError("toml: not enough alphas for the number of targets")
+ValueError: toml: not enough alphas for the number of targets
+'2024-09-03 09:38' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-09-03 09:38' — __main__ — DEBUG — <module>:28 — ['-pca']
+'2024-09-03 09:38' — __pca__ — INFO — setup_pca:92 — Setting up
+'2024-09-03 09:38' — __pca__ — DEBUG — setup_pca:95 — n labels = 20
+'2024-09-03 09:39' — __main__ — ERROR — <module>:52 — alpha must be numeric or None, not a string
 Traceback (most recent call last):
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 31, in <module>
-    processing.process()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 140, in process
-    check_params()
-  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/processing.py", line 354, in check_params
-    raise ValueError('toml: When using bandpass or bandstop filters, second freq > first freq')
-ValueError: toml: When using bandpass or bandstop filters, second freq > first freq
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 43, in <module>
+    pca.draw()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 52, in draw
+    pca()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 56, in pca
+    pca2D()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 209, in pca2D
+    ax.scatter(x_data, y_data,
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/__init__.py", line 1473, in inner
+    return func(
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/axes/_axes.py", line 4876, in scatter
+    collection = mcoll.PathCollection(
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/collections.py", line 1027, in __init__
+    super().__init__(**kwargs)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/collections.py", line 206, in __init__
+    self._internal_update(kwargs)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1216, in _internal_update
+    return self._update_props(
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1192, in _update_props
+    ret.append(func(v))
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/collections.py", line 848, in set_alpha
+    artist.Artist._set_alpha_for_array(self, alpha)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1028, in _set_alpha_for_array
+    raise TypeError("alpha must be numeric or None, not a string")
+TypeError: alpha must be numeric or None, not a string
+'2024-09-03 09:40' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-09-03 09:40' — __main__ — DEBUG — <module>:28 — ['-pca']
+'2024-09-03 09:40' — __pca__ — INFO — setup_pca:92 — Setting up
+'2024-09-03 09:40' — __pca__ — DEBUG — setup_pca:95 — n labels = 20
+'2024-09-03 09:40' — __main__ — ERROR — <module>:52 — alpha must be numeric or None, not a string
+Traceback (most recent call last):
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/firelearn.py", line 43, in <module>
+    pca.draw()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 52, in draw
+    pca()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 56, in pca
+    pca2D()
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/scripts/pca.py", line 218, in pca2D
+    ax.scatter(np.mean(x_data), np.mean(y_data),
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/__init__.py", line 1473, in inner
+    return func(
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/axes/_axes.py", line 4876, in scatter
+    collection = mcoll.PathCollection(
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/collections.py", line 1027, in __init__
+    super().__init__(**kwargs)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/collections.py", line 206, in __init__
+    self._internal_update(kwargs)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1216, in _internal_update
+    return self._update_props(
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1192, in _update_props
+    ret.append(func(v))
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/collections.py", line 848, in set_alpha
+    artist.Artist._set_alpha_for_array(self, alpha)
+  File "/home/wlutz/PycharmProjects/FireLearnConsole/.venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1028, in _set_alpha_for_array
+    raise TypeError("alpha must be numeric or None, not a string")
+TypeError: alpha must be numeric or None, not a string
+'2024-09-03 09:40' — __main__ — INFO — <module>:27 — NEW RUN
+'2024-09-03 09:40' — __main__ — DEBUG — <module>:28 — ['-pca']
+'2024-09-03 09:40' — __pca__ — INFO — setup_pca:92 — Setting up
+'2024-09-03 09:40' — __pca__ — DEBUG — setup_pca:95 — n labels = 20
+'2024-09-03 09:40' — __pca__ — INFO — pca2D:247 — Plotting result

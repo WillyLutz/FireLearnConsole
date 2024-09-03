@@ -1,13 +1,13 @@
 [dataset]
 # Absolute path recquired
-path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/TAHINAVIRUS/DATASETS/merge ni tahv rg27 t0 t30 t48 all donors separated_Xy_test.csv"
+path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/DATASETS/master_dataset_merged_hours.csv"
 target_column = "label"  # The column name containing the labels
-targets = ["NI T48 B", "TAHV T48 B"]  # The labels that will be plotted
+targets = ["DisabledFlow Ctl T=16", "DisabledFlow GW_NoEV T=16", "DisabledFlow GW_EV T=16", "DisabledFlow NoGW_EV T=16"] # The labels that will be plotted
 
 [figure]
 show = true  # or false
 dpi = 100
-save = "output/simple_plot.png"  # empty to disable
+save = "" #""/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/RESULTS/plot - train data.png"  # empty to disable
 
 font = "DejaVu Sans"
 width = 8
@@ -20,7 +20,7 @@ alpha = 1
 fillalpha = 0.4
 
 [title]
-label = "Amplitude plot by features"
+label = "Amplitude plot by features (harmonics filtered)"
 size = 14
 
 [axes]
@@ -30,15 +30,15 @@ ylabel = "Amplitude [pV]"
 ysize = 12
 
 [ticks]
-xrot = 0
+xrot = 45
 xsize = 12
 xround = 2
-nx = 7  # number of x ticks
+nx = 100  # number of x ticks
 
 yrot = 0
 ysize = 12
 yround = 2
-ny = 5 # number of y ticks
+ny = 15 # number of y ticks
 
 [legend]
 enable = true
