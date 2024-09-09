@@ -1,22 +1,21 @@
 [model]
-path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/MODELS/DisabledFlow harmonics filtered ctl t16 vs gw_noev t16.rfc"  # a trained model
+path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/MODELS/DisabledFlow harmonics filtered train all cond T16.rfc"  # a trained model
 train = ["DisabledFlow Ctl T=16" , "DisabledFlow GW_NoEV T=16", "DisabledFlow NoGW_EV T=16", "DisabledFlow GW_EV T=16",]
-test = ["DisabledFlow Ctl T=16" , "DisabledFlow GW_NoEV T=16", "DisabledFlow NoGW_EV T=16", "DisabledFlow GW_EV T=16", "DisabledFlow GW_EV T=0", "DisabledFlow GW_EV T=1", "DisabledFlow GW_EV T=2", "DisabledFlow GW_EV T=3", "DisabledFlow GW_EV T=4", "DisabledFlow GW_EV T=5", "DisabledFlow GW_EV T=6", "DisabledFlow GW_EV T=7", "DisabledFlow GW_EV T=8", "DisabledFlow GW_EV T=9", "DisabledFlow GW_EV T=10", "DisabledFlow GW_EV T=11", "DisabledFlow GW_EV T=12", "DisabledFlow GW_EV T=13", "DisabledFlow GW_EV T=14", "DisabledFlow GW_EV T=15",]
+test = ["DisabledFlow Ctl T=16" , "DisabledFlow GW_NoEV T=16", "DisabledFlow NoGW_EV T=16", "DisabledFlow GW_EV T=16", "DisabledFlow GW_EV T=0", "DisabledFlow GW_EV T=1", ]#"DisabledFlow GW_EV T=2", "DisabledFlow GW_EV T=3", "DisabledFlow GW_EV T=4", "DisabledFlow GW_EV T=5", "DisabledFlow GW_EV T=6", "DisabledFlow GW_EV T=7", "DisabledFlow GW_EV T=8", "DisabledFlow GW_EV T=9", "DisabledFlow GW_EV T=10", "DisabledFlow GW_EV T=11", "DisabledFlow GW_EV T=12", "DisabledFlow GW_EV T=13", "DisabledFlow GW_EV T=14", "DisabledFlow GW_EV T=15",]
 
 [dataset]
 path = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/DATASETS/Dataset_DisabledFlow_all_conditions_harmonics_filtered_merged_hours_Xy_test.csv"
 target_column = "label"
 
 [figure]
-iterations = 1
-mode = "percent" # numeric or percent
+iterations = 3
 show = true
 dpi = 600
 save = "" # empty to disable
 export_data = "/media/wlutz/TOSHIBA EXT/Electrical activity analysis/EV_GW/RESULTS/confusion results.csv" # empty to disable. '.csv' extension required
+grid = true # true or false to enable grid
+minor_grid = true  # true or false to enable grid on minor ticks
 
-width = 8
-height = 8
 font = "DejaVu Sans"
     [figure.title]
     label = "Effect of EVs on electrical activity"
@@ -24,7 +23,8 @@ font = "DejaVu Sans"
 
     [figure.cbar] # color bar
     shrink =  0.5
-    location = 'right'
+    location = 'bottom'
+    label_size = 16
 
     [figure.annot]  # scores and CUP
     size = 12
@@ -37,7 +37,7 @@ font = "DejaVu Sans"
     ysize = 12
 
     [figure.ticks]
-    xrot = 0
+    xrot = 45
     xsize = 12
     yrot = 0
     ysize = 12

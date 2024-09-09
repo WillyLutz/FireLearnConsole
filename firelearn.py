@@ -4,7 +4,7 @@ import logging
 import toml
 import logging.config
 
-from scripts import processing, learning, confusion, feature_importance, pca, simple_plot, spectrogram
+from scripts import processing, learning, confusion, feature_importance, pca, simple_plot, spectrogram, dotplot
 
 with open(os.path.join(os.getcwd(), "config/firelearn.toml")) as f:
     config = toml.load(f)
@@ -47,6 +47,9 @@ if __name__ == '__main__':
             
         if '-s' in args:
             spectrogram.draw()
+            
+        if '-dot' in args:
+            dotplot.draw()
             
     except Exception as e:
         logger.exception(e)

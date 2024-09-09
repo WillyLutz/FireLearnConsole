@@ -17,8 +17,8 @@ width = 8
 height = 8
 marker_size = 12
 marker = "."
-colors = ['blue', 'red', 'green', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange']
-alphas = ["1", "1", "1", "1", "0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2",]
+colors = ['blue', 'red', 'green', 'orange', 'orange', 'orange','orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange', 'orange']# ]
+alphas = ["1", "1", "1", "1", "0.07","0.14","0.21","0.28","0.33","0.38","0.43","0.5","0.57","0.63","0.7","0.77","0.83","0.86","0.93","0.96",]#]
 
     [figure.title]
     label = "Effect of EVs on electrical activity"
@@ -34,15 +34,15 @@ alphas = ["1", "1", "1", "1", "0.2","0.2","0.2","0.2","0.2","0.2","0.2","0.2","0
     zsize = 12
 
     [figure.ticks]
-    xrot = 0
+    xrot = 45
     xsize = 12
     xround = 2
-    nx = 7
+    nx = 15
 
     yrot = 0
     ysize = 12
     yround = 2
-    ny = 5
+    ny = 15
 
     zrot = 0
     zsize = 12
