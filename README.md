@@ -1,4 +1,4 @@
-# FireLearn Console v0.2.3
+# FireLearn Console v0.2.4
 
 FireLearn Console (FLC) is a console-driven application developed by Willy Lutz that 
 aims to provide an easy way to analyze multiple numerical data, such as electrical 
@@ -11,7 +11,7 @@ Everything the user needs to know will be explained thoroughly in this document.
 
 # Table of contents
 
-- [FireLearn Console v0.2.3](#firelearn-console-v023)
+- [FireLearn Console v0.2.4](#firelearn-console-v024)
 - [Table of contents](#table-of-contents)
 - [Installation and usage](#installation-and-usage)
   - [Installation](#installation)
