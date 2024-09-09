@@ -1,4 +1,4 @@
-# FireLearn Console v0.2.0
+# FireLearn Console v0.2.4
 
 FireLearn Console (FLC) is a console-driven application developed by Willy Lutz that 
 aims to provide an easy way to analyze multiple numerical data, such as electrical 
@@ -11,7 +11,7 @@ Everything the user needs to know will be explained thoroughly in this document.
 
 # Table of contents
 
-- [FireLearn Console v0.2.0](#firelearn-console-v020)
+- [FireLearn Console v0.2.4](#firelearn-console-v024)
 - [Table of contents](#table-of-contents)
 - [Installation and usage](#installation-and-usage)
   - [Installation](#installation)
@@ -51,6 +51,7 @@ Everything the user needs to know will be explained thoroughly in this document.
     - [Feature importance](#feature-importance)
     - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
     - [Confusion matrix](#confusion-matrix)
+    - [Dotplot] (#dotplot)
 - [Miscellaneous](#miscellaneous)
   - [Logging](#logging)
   - [Support](#support)
@@ -693,6 +694,19 @@ For more details on how to read a confusion matrix, you can read this
 >
 > Be sure that the dataset you use for testing does not contain data that has been used for the 
 > training of your machine learning model. The same stands for every machine-learning related analysis.
+
+### Dotplot
+Configuration file : `dotplot.toml`
+
+Enabled using `-dot` command line argument.
+
+<img src="data/help/dotplot.png" width="600" height="400">
+
+The configuration of this analysis follow the same parts as for the [confusion analysis](#confusion-matrix), except
+for some minor variables that are explained in the configuration file directly.
+It displays the same data as the [confusion matrix](#confusion-matrix) but on a more
+visually friendly way.
+The classification percentage is expressed by the circles area, and the CUP but their colors. 
 
 # Miscellaneous
 

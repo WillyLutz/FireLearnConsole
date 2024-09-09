@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.2.1&#10;fix of typo of toml">
+    <list default="true" id="c83454b5-fa8f-46d6-bc3b-852315c020d9" name="Changes" comment="v0.2.3&#10;fiw pca transform application (double fit previously)">
+      <change afterPath="$PROJECT_DIR$/config/dotplot.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/dotplot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/confusion.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/confusion.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/feature_importance.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/feature_importance.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/learn.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/learn.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/pca.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/pca.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/process.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/process.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/simple_plot.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/simple_plot.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firelearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/firelearn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/firelearn.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/firelearn.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/confusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/confusion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/processing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -54,11 +57,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Python.firelearn.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.firelearn.executor&quot;: &quot;Run&quot;,
     &quot;Python.python 3.10.12.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;aem-ide.servers.initialized&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fixes&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/wlutz/PycharmProjects/FireLearnConsole/data/help&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
@@ -94,7 +97,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/firelearn.py" />
-      <option name="PARAMETERS" value="-c" />
+      <option name="PARAMETERS" value="-dot" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -270,11 +273,38 @@
       <option name="project" value="LOCAL" />
       <updated>1724334145405</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="v0.2.2&#10;fix floating alphas not supported (pca)&#10;fix harmonics generation (processing)">
+      <option name="closed" value="true" />
+      <created>1725349378551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725349378551</updated>
+    </task>
+    <task id="LOCAL-00017" summary="v0.2.3&#10;fiw pca transform application (double fit previously)">
+      <option name="closed" value="true" />
+      <created>1725355597886</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725355597886</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.0.1&#10;a ready-to-test version. Unstable for general use." />
@@ -292,7 +322,9 @@
     <MESSAGE value="v0.2.0&#10;readme fix" />
     <MESSAGE value="v0.2.1&#10;fix of process check params" />
     <MESSAGE value="v0.2.1&#10;fix of typo of toml" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.2.1&#10;fix of typo of toml" />
+    <MESSAGE value="v0.2.2&#10;fix floating alphas not supported (pca)&#10;fix harmonics generation (processing)" />
+    <MESSAGE value="v0.2.3&#10;fiw pca transform application (double fit previously)" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.2.3&#10;fiw pca transform application (double fit previously)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -314,12 +346,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/confusion.py</url>
-          <line>98</line>
+          <line>95</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/confusion.py</url>
-          <line>93</line>
+          <line>90</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -335,12 +367,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/confusion.py</url>
           <line>50</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/confusion.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -384,6 +411,18 @@
           <option name="totalLines" value="20472869" />
           <option name="info" value="v0.2.1&#10;fix of typo of toml" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1725349386673" />
+          <option name="linesCode" value="5649973" />
+          <option name="totalLines" value="20480536" />
+          <option name="info" value="v0.2.2&#10;fix floating alphas not supported (pca)&#10;fix" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1725355600736" />
+          <option name="linesCode" value="5649971" />
+          <option name="totalLines" value="20480534" />
+          <option name="info" value="v0.2.3&#10;fiw pca transform application (double fit p" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -411,6 +450,12 @@
           <option name="linesCode" value="5649930" />
           <option name="totalLines" value="20472869" />
           <option name="info" value="22 août 2024" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1725355600736" />
+          <option name="linesCode" value="5649971" />
+          <option name="totalLines" value="20480534" />
+          <option name="info" value="3 sept. 2024" />
         </TimePoint>
       </list>
     </option>

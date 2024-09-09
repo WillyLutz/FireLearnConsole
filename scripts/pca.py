@@ -15,41 +15,45 @@ with open(os.path.join(os.getcwd(), "config/pca.toml")) as f:
 logger = logging.getLogger("__pca__")
 
 
-def fit_pca(dataframe: pd.DataFrame, n_components=3, label_column="label"):
-    features = dataframe.loc[:, dataframe.columns != label_column].columns
-    x = dataframe.loc[:, features].values
-    x = StandardScaler().fit_transform(x)  # normalizing the features
-    pca = PCA(n_components=n_components)
-    principalComponent = pca.fit_transform(x)
+def pca_fit_apply(dataframe_fit, dataframe_apply, n_components, label_column):
+    features = dataframe_fit.loc[:, dataframe_fit.columns != label_column].columns
+
+    # normalizing the features
+    pca_object = PCA(n_components=n_components)
     principal_component_columns = [f"principal component {i + 1}" for i in range(n_components)]
     
-    pcdf = pd.DataFrame(data=principalComponent
+    # --- FIT
+    x_fit = dataframe_fit.loc[:, features].values
+    standard_scaler = StandardScaler().fit(x_fit)
+    x_fit = standard_scaler.transform(x_fit)
+    principalComponent_fit = pca_object.fit_transform(x_fit)
+    pcdf = pd.DataFrame(data=principalComponent_fit
                         , columns=principal_component_columns, )
     pcdf.reset_index(drop=True, inplace=True)
-    dataframe.reset_index(drop=True, inplace=True)
+    dataframe_fit.reset_index(drop=True, inplace=True)
+    pcdf[label_column] = dataframe_fit[label_column]
     
-    pcdf[label_column] = dataframe[label_column]
-    
-    return pca, pcdf, pca.explained_variance_ratio_
-
-
-def apply_pca(pca, dataframe, label_column="label"):
-    features = dataframe.loc[:, dataframe.columns != label_column].columns
-    x = dataframe.loc[:, features].values
-    x = StandardScaler().fit_transform(x)  # normalizing the features
-    transformed_ds = pca.transform(x)
-    transformed_df = pd.DataFrame(data=transformed_ds,
-                                  columns=[f"principal component {i + 1}" for i in range(transformed_ds.shape[1])])
-    
+    # --- APPLY
+    x_apply = dataframe_apply.loc[:, features].values  # normalizing the features
+    x_apply = standard_scaler.transform(x_apply)
+    principalComponent_apply = pca_object.transform(x_apply)
+    transformed_df = pd.DataFrame(data=principalComponent_apply,
+                                  columns=[f"principal component {i + 1}" for i in range(principalComponent_apply.shape[1])])
     transformed_df.reset_index(drop=True, inplace=True)
-    dataframe.reset_index(drop=True, inplace=True)
-    transformed_df[label_column] = dataframe[label_column]
-    return transformed_df
-
+    dataframe_apply.reset_index(drop=True, inplace=True)
+    transformed_df[label_column] = dataframe_apply[label_column]
+    
+    # ---
+    ratio = pca_object.explained_variance_ratio_
+    ratio = [round(x * 100, 2) for x in ratio]
+    
+    return transformed_df, ratio
+    
 
 def draw():
     if config["pca"]["n_components"] == 2 or config["pca"]["n_components"] == 3:
         pca()
+
 
 def pca():
     if config["pca"]["n_components"] == 2:
@@ -103,12 +107,10 @@ def setup_pca():
     labels_to_apply = config["pca"]["apply"]
     
     df_fit = df[df[label_column].isin(labels_to_fit)]
-    n_components = config["pca"]["n_components"]
-    pca, pcdf_fit, ratio = fit_pca(df_fit, n_components=n_components, label_column=label_column)
     df_apply = df[df[label_column].isin(labels_to_apply)]
-    pcdf_applied = apply_pca(pca, df_apply, label_column=label_column)
+    n_components = config["pca"]["n_components"]
     
-    ratio = [round(x * 100, 2) for x in ratio]
+    pcdf_applied, ratio = pca_fit_apply(df_fit, df_apply, n_components, label_column)
     
     return fig, ax, pcdf_applied, ratio
 
@@ -302,7 +304,6 @@ def pca3D():
     
     # ----- LEGEND
     ax = set_legend(ax=ax)
-
     
     plt.tight_layout()
     if config["figure"]["save"]:
@@ -330,6 +331,3 @@ def check_params():
     
     if not config['pca']['fit']:
         raise ValueError("toml: 'fit' is empty. At least one label is required.")
-
-
-
